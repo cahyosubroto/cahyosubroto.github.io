@@ -14,7 +14,7 @@ This is how to connect to Redpanda from Zilla. The examples use the below Enviro
 
 Before we proceed further let's use the below command to verify connectivity to your Kafka.
 
-```bash:no-line-numbers
+```bash
 kcat -b $KAFKA_BOOTSTRAP_SERVER \
 -X security.protocol=sasl_ssl -X sasl.mechanisms=PLAIN \
 -X sasl.username=$SASL_USERNAME -X sasl.password=$SASL_PASSWORD \
@@ -58,4 +58,12 @@ bindings:
 SNI adds the domain name to the TLS handshake process so that the Zilla process reaches the right domain name and receives the correct SSL certificate.
 :::
 
-To test the above SASL config you can try out the [http.redpanda.sasl.scram example](https://github.com/aklivity/zilla-examples/tree/main/http.redpanda.sasl.scram).
+To test the above config you Download and run the Zilla `http.redpanda.sasl.scram` cookbook using this install script. It will start Zilla and Kafka.
+
+```bash
+wget -qO- https://raw.githubusercontent.com/aklivity/zilla-examples/main/startup.sh | sh -s -- http.redpanda.sasl.scram
+```
+
+::: note
+Alternatively, download [http.redpanda.sasl.scram](https://github.com/aklivity/zilla-docs/releases/latest/download/http.redpanda.sasl.scram.tar.gz) and follow the `README` yourself.
+:::

@@ -4,22 +4,22 @@
 
 You can install Zilla using our [homebrew tap](https://github.com/aklivity/homebrew-tap).
 
-```bash:no-line-numbers
+```bash
 brew tap aklivity/tap
 brew install zilla
 ```
 
 Now you can run any `zilla.yaml` config.
 
-```bash:no-line-numbers
+```bash
 zilla start -ve -c ./zilla.yaml
 ```
 
 ## Running Zilla via Docker
 
-You can run your `zilla.yaml` config inside a container. If you want to deploy on Kubernetes, use our [helm chart](./deploy-operate.md).
+You can run your `zilla.yaml` config inside a container. If you want to deploy on Kubernetes, use our [helm chart](./index.md).
 
-```bash:no-line-numbers
+```bash
 docker run -v ./zilla.yaml:/etc/zilla/zilla.yaml ghcr.io/aklivity/zilla:latest start -ve
 ```
 
@@ -27,7 +27,7 @@ docker run -v ./zilla.yaml:/etc/zilla/zilla.yaml ghcr.io/aklivity/zilla:latest s
 
 Go to the [Zilla artifacthub](https://artifacthub.io/packages/helm/zilla/zilla) page to learn more about installing Zilla using Helm.
 
-```bash:no-line-numbers
+```bash
 helm install zilla oci://ghcr.io/aklivity/charts/zilla --namespace zilla --create-namespace --wait \
 --values values.yaml \
 --set-file zilla\\.yaml=zilla.yaml
@@ -39,7 +39,7 @@ The Zilla configuration is in the `zilla.yaml` file, which is added to the Helm 
 
 You can define your TCP ports to services mapping in a `tcp-services` ConfigMap. Official documentation on this method can be found in the [Exposing TCP and UDP services](https://kubernetes.github.io/ingress-nginx/user-guide/exposing-tcp-udp-services/) guide.
 
-```bash:no-line-numbers
+```bash
 kubectl create configmap tcp-services \
   --from-literal=7183="$NAMESPACE/$SERVICE_NAME:7183" \
   --from-literal=7151="$NAMESPACE/$SERVICE_NAME:7151" \
@@ -48,7 +48,7 @@ kubectl create configmap tcp-services \
 
 You will need to download the YAML manifest for the ingress controller. You can find an example on the [Ingress Nginx Quickstart guide](https://kubernetes.github.io/ingress-nginx/deploy/#quick-start)
 
-```bash:no-line-numbers
+```bash
 curl https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.10.1/deploy/static/provider/cloud/deploy.yaml > ingress-deploy.yaml
 ```
 
@@ -93,7 +93,7 @@ spec:
 
 Create the ingress controller:
 
-```bash:no-line-numbers
+```bash
 kubectl apply -f ingress-deploy.yaml
 ```
 
@@ -105,13 +105,13 @@ All local files referenced in a `zilla.yaml` config should be found in a locatio
 
 - From a single file.
 
-  ```bash:no-line-numbers
+  ```bash
   kubectl create configmap my-files-configmap --from-file=my-file.txt -n $NAMESPACE -o yaml --dry-run=client | kubectl apply -f -
   ```
 
 - All files in a folder. This does not add folders recursively and each folder needs to be individually mapped
 
-  ```bash:no-line-numbers
+  ```bash
   kubectl create configmap my-folder-configmap --from-file=path/to/my-folder/ -n $NAMESPACE -o yaml --dry-run=client | kubectl apply -f -
   ```
 
@@ -146,7 +146,7 @@ volumes:
 
 For every running Zilla pod you will need to first copy the `/var/run/zilla` directory to make sure no additional files are written while it is compressed then compress the full directory to make it easier to copy.
 
-```bash:no-line-numbers
+```bash
 kubectl get pod \
 -l "app.kubernetes.io/name=zilla" \
 -n $NAMESPACE \
@@ -157,7 +157,7 @@ kubectl get pod \
 
 Copy the compressed `/var/run/zilla` directory off of the pod into your local directory using the pod name.
 
-```bash:no-line-numbers
+```bash
 kubectl get pod \
 -l "app.kubernetes.io/name=zilla" \
 -n $NAMESPACE \
@@ -176,11 +176,11 @@ Errors and misconfigured parts of the `zilla.yaml` file are detected by Zilla an
 
 This feature is demonstrated in the above Helm install command. Running a `helm update ...` with changes to the `zilla.yaml`, k8s will update the config map, which writes the new content into the running pods. Zilla will detect those file changes and load the new config.
 
-Zilla can load the `zilla.yaml` config from a remote source using the `-c` or `--config` [CLI flag](../reference/config/zilla-cli.md#c-config). The auto reconfigure feature will still work when pulling the config remotely.
+Zilla can load the `zilla.yaml` config from a remote source using the `-c` or `--config` [CLI flag](../../reference/config/zilla-cli.md#c-config). The auto reconfigure feature will still work when pulling the config remotely.
 
 ## Auto Scaling
 
-Zilla will start workers that default to the CPU cores it is allowed to use. This makes horizontal scaling easy with a 1:1 ratio of instances to workers. Any of the default scaling metrics based on server CPU usage will enable Zilla to handle traffic spikes. Additionally, Zilla [Telemetry](../reference/config/overview.md#telemetry) configuration provides more data when determining how to scale. The [Prometheus autoscale example](https://github.com/aklivity/zilla-examples/tree/main/kubernetes.prometheus.autoscale) demonstrates using metrics from the [Prometheus exporter](../reference/config/telemetry/exporters/prometheus.md) to horizontally scale Zilla on k8s.
+Zilla will start workers that default to the CPU cores it is allowed to use. This makes horizontal scaling easy with a 1:1 ratio of instances to workers. Any of the default scaling metrics based on server CPU usage will enable Zilla to handle traffic spikes. Additionally, Zilla [Telemetry](../../reference/config/overview.md#telemetry) configuration provides more data when determining how to scale. The [Autoscaling on K8s](../../how-tos/deploy-operate/autoscale-k8s.md) guide demonstrates using metrics from the [Prometheus exporter](../../reference/config/telemetry/exporters/prometheus.md) to horizontally scale Zilla on k8s.
 
 ## Enable Incubator Features
 
@@ -196,4 +196,4 @@ ZILLA_INCUBATOR_ENABLED=true
 
 ## Export `TRACE` level Log Dump
 
-The [zilla dump](../reference/config/zilla-cli.md#zilla-dump) command will capture all of the internal events at the stream level for a detailed analysis of what zilla was doing. These logs are captured down to the nanosecond and are exported as a `.pcap` file to be used with [Wireshark](https://wiki.wireshark.org/SampleCaptures). You can find instructions on how to view the capture in wireshark in the zilla dump [plugin install section](../reference/config/zilla-cli.md#i-install-plugin-directory).
+The [zilla dump](../../reference/config/zilla-cli.md#zilla-dump) command will capture all of the internal events at the stream level for a detailed analysis of what zilla was doing. These logs are captured down to the nanosecond and are exported as a `.pcap` file to be used with [Wireshark](https://wiki.wireshark.org/SampleCaptures). You can find instructions on how to view the capture in wireshark in the zilla dump [plugin install section](../../reference/config/zilla-cli.md#i-install-plugin-directory).
