@@ -125,7 +125,15 @@ bindings:
 
 However, if the `Kafka` cluster is secured by a TLS server certificate that is signed by a private certificate authority then you need to add a `vault` [config](../../reference/config/vaults/filesystem.md) to provide access to certificates needed by the TLS client binding.
 
-To test the above config you can use it to add or replace the necessary bindings in the [http.kafka.sasl.scram example](https://github.com/aklivity/zilla-examples/tree/main/http.kafka.sasl.scram).
+To test the above config you Download and run the Zilla `http.kafka.sasl.scram` cookbook using this install script. It will start Zilla and Kafka.
+
+```bash
+wget -qO- https://raw.githubusercontent.com/aklivity/zilla-examples/main/startup.sh | sh -s -- http.kafka.sasl.scram
+```
+
+::: note
+Alternatively, download [http.kafka.sasl.scram](https://github.com/aklivity/zilla-docs/releases/latest/download/http.kafka.sasl.scram.tar.gz) and follow the `README` yourself.
+:::
 
 ### Kafka over TLS/SSL using client certificates
 
@@ -144,14 +152,14 @@ You can use the scripts shown below to generate `truststore.p12` and `keystore.p
 
 @tab truststore.p12
 
-```bash:no-line-numbers
+```bash
 keytool -import -file ca.pem -alias YOUR_KAFKA_SIGNED_CLIENT_CERT_ALIAS \
 -keystore truststore.p12
 ```
 
 @tab keystore.p12
 
-```bash:no-line-numbers
+```bash
 openssl pkcs12 -export -in service.cert -inkey service.key
 -out keystore.p12 -name YOUR_KAFKA_CA_CERT_ALIAS \
 -CAfile ca.pem
@@ -208,7 +216,7 @@ bindings:
 SNI adds the domain name to the TLS handshake process so that the Zilla process reaches the right domain name and receives the correct SSL certificate.
 :::
 
-To test the above config you can use it to add or replace the necessary bindings in the [http.kafka.sasl.scram example](https://github.com/aklivity/zilla-examples/tree/main/http.kafka.sasl.scram).
+To test the above config you can use it to add or replace the necessary bindings in the [http.kafka.sasl.scram](https://github.com/aklivity/zilla-docs/releases/latest/download/http.kafka.sasl.scram.tar.gz) cookbook.
 
 ### Kafka over SASL
 
@@ -258,4 +266,12 @@ bindings:
 
 :::
 
-To test the above SASL config you can try out the  [http.kafka.sasl.scram example](https://github.com/aklivity/zilla-examples/tree/main/http.kafka.sasl.scram).
+To test the above SASL config you Download and run the Zilla `http.kafka.sasl.scram` cookbook using this install script. It will start Zilla and Kafka.
+
+```bash
+wget -qO- https://raw.githubusercontent.com/aklivity/zilla-examples/main/startup.sh | sh -s -- http.kafka.sasl.scram
+```
+
+::: note
+Alternatively, download [http.kafka.sasl.scram](https://github.com/aklivity/zilla-docs/releases/latest/download/http.kafka.sasl.scram.tar.gz) and follow the `README` yourself.
+:::

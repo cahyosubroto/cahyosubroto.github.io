@@ -34,7 +34,7 @@ Follow the [Create Client Certificate guide](../../solutions/how-tos/aws-service
 
 First, you will export the Client Certificate to a local file called `client.cert`. To do this you will need the `ARN` of the client certificate as well as of the [certificate authority](../../solutions/how-tos/aws-services/create-certificate-authority-acm.md) used to issue the certificate, and run the following command:
 
-```bash:no-line-numbers
+```bash
 aws acm-pca get-certificate --certificate-authority-arn CERTIFICATE_AUTHORITY_ARN \
 --certificate-arn CERTIFICATE_ARN --output text
 ```
@@ -80,7 +80,7 @@ With the `bootstrap server name` in hand, run the following command to create th
 
 #### keystore.p12
 
-```bash:no-line-numbers
+```bash
 openssl pkcs12 -export -in client.cert -inkey client-1.key.pem \
 -out keystore.p12 -name SIGNED_CLIENT_CERT_ALIES \
 -CAfile ca.pem
@@ -142,4 +142,4 @@ bindings:
 SNI adds the domain name to the TLS handshake process so that the Zilla process reaches the right domain name and receives the correct SSL certificate.
 :::
 
-To test the above config you can use it to add or replace the necessary bindings in the [http.kafka.sasl.scram example](https://github.com/aklivity/zilla-examples/tree/main/http.kafka.sasl.scram).
+To test the above config you can use it to add or replace the necessary bindings in the [http.kafka.sasl.scram](https://github.com/aklivity/zilla-docs/releases/latest/download/http.kafka.sasl.scram.tar.gz) cookbook.

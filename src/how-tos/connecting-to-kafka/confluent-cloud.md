@@ -21,7 +21,7 @@ Confluent Cloud is exposed over `SASL_SSL` authentication protocols and the `Con
 
 Before we proceed further let's use the below command to verify connectivity to your Kafka.
 
-```bash:no-line-numbers
+```bash
 kcat -b $KAFKA_BOOTSTRAP_SERVER \
 -X security.protocol=sasl_ssl -X sasl.mechanisms=PLAIN \
 -X sasl.username=$KAFKA_API_KEY -X sasl.password=$KAFKA_API_SECRET \
@@ -65,4 +65,4 @@ bindings:
 SNI adds the domain name to the TLS handshake process so that the Zilla process reaches the right domain name and receives the correct SSL certificate.
 :::
 
-To test the above config you can use it to add or replace the necessary bindings in the [http.kafka.sasl.scram example](https://github.com/aklivity/zilla-examples/tree/main/http.kafka.sasl.scram).
+To test the above config you can use it to add or replace the necessary bindings in the [http.kafka.sasl.scram](https://github.com/aklivity/zilla-docs/releases/latest/download/http.kafka.sasl.scram.tar.gz) cookbook.

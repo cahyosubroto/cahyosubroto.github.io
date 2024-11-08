@@ -24,13 +24,13 @@ Running this Zilla sample will collect basic metrics for an http service.
 
 Run the Zilla docker image as a daemon with the `zilla.yaml` file volume mounted.
 
-```bash:no-line-numbers
+```bash
 <!-- @include: ./telemetry_docker_run.sh#run_command -->
 ```
 
 ### Send an HTTP POST
 
-```bash:no-line-numbers
+```bash
 <!-- @include: ./telemetry_docker_run.sh#test_zilla -->
 ```
 
@@ -40,7 +40,7 @@ Hello, world
 
 ### Viewing Standard Out Logs
 
-```bash:no-line-numbers
+```bash
 <!-- @include: ./telemetry_docker_run.sh#see_logs -->
 ```
 
@@ -54,7 +54,7 @@ Metrics-example.north_http_server [08/May/2024:18:46:14 +0000] REQUEST_ACCEPTED 
 
 Go to <http://localhost:7190/metrtics> to see the collected data or run the below `curl` command.
 
-```bash:no-line-numbers
+```bash
 <!-- @include: ./telemetry_docker_run.sh#see_metrics -->
 ```
 
@@ -78,13 +78,15 @@ http_response_size_bytes_sum{namespace="Metrics-example",binding="http_server"} 
 
 Try out the other [Zilla examples](https://github.com/aklivity/zilla-examples).
 
+Check out our other guides:
+
 - [Push to an OTLP Collector](../../how-tos/telemetry/opentelemetry-protocol.md)
-- [kubernetes.prometheus.autoscale](https://github.com/aklivity/zilla-examples/tree/main/kubernetes.prometheus.autoscale)
+- [Autoscaling on K8s](../../how-tos/deploy-operate/autoscale-k8s.md)
 
 ## Clean up
 
 Remove the running container
 
-```bash:no-line-numbers
+```bash
 <!-- @include: ./telemetry_docker_run.sh#teardown -->
 ```
