@@ -1,7 +1,14 @@
 import { navbar } from "vuepress-theme-hope";
 
 export const enNavbar = navbar([
-  "/",
+  {
+    text: "CLI Documentation",
+    link: "cli/introduction.md",
+  },
+  {
+    text: "API Documentation",
+    link: "api/api-reference.md",
+  },
   // {
   //   text: "Guide",
   //   icon: "lightbulb",

@@ -9,7 +9,8 @@ export default defineUserConfig({
     "/": {
       lang: "en-US",
       title: "Documentation",
-      description: "The official documentation for the aklivity/zillabase open-source project",
+      description:
+        "The official documentation for the aklivity/zillabase open-source project",
     },
   },
 

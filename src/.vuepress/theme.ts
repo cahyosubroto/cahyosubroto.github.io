@@ -20,16 +20,15 @@ export default hopeTheme({
 
   docsDir: "src",
   pure: true,
-  
+
   navbarLayout: {
     start: ["Brand"],
     // center: ["Search"],
     end: ["Links", "Repo", "Outlook"],
   },
 
-  
   pageInfo: ["Category", "Tag"],
-  
+
   locales: {
     "/": {
       // navbar
@@ -48,11 +47,25 @@ export default hopeTheme({
     },
   },
 
-
   plugins: {
     components: {
-      components: ["Badge", "VPCard"],
+      components: [
+        "ArtPlayer",
+        "Badge",
+        "BiliBili",
+        "CodePen",
+        "PDF",
+        "Share",
+        "SiteInfo",
+        "StackBlitz",
+        "VPBanner",
+        "VPCard",
+        "VidStack",
+        "XiGua",
+      ],
     },
+
+    redirect: true,
 
     // These features are enabled for demo, only preserve features you need here
     markdownImage: {
@@ -69,7 +82,7 @@ export default hopeTheme({
     // },
 
     // This features is enabled for demo, only preserve if you need it
-    markdownTab: true,
+    markdownTab: false,
 
     // These features are enabled for demo, only preserve features you need here
     mdEnhance: {
