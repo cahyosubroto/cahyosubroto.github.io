@@ -3,15 +3,18 @@ import { sidebar } from "vuepress-theme-hope";
 export const enSidebar = sidebar({
   "/": [
     {
-      text: "Documentation",
+      icon: "/assets/icons/doc.svg",
+      text: " Documentation",
       link: "/",
     },
     {
-      text: "CLI Documentation",
+      icon: "/assets/icons/cli ref.svg",
+      text: " CLI Documentation",
       link: "/cli",
     },
     {
-      text: "API Documentation",
+      icon: "/assets/icons/api ref.svg",
+      text: " API Documentation",
       link: "/api",
     },
     {

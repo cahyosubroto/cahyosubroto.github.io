@@ -7,7 +7,7 @@ import { hostnameSEO, docsRepo } from "./env.js";
 export default hopeTheme({
   hostname: hostnameSEO,
 
-  iconAssets: "fontawesome-with-brands",
+  iconAssets: ["fontawesome-with-brands"],
 
   logo: "/logo.png",
   favicon: "/favicon.ico",

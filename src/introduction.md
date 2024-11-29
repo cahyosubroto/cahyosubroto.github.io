@@ -8,13 +8,13 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
 
 <VPCard
   title="Overview"
-  logo="https://mister-hope.com/logo.svg"
+  logo="/assets/icons/overview.svg"
   link="/getting-started/overview"
 />
 
 <VPCard
   title="Quickstart"
-  logo="https://mister-hope.com/logo.svg"
+  logo="/assets/icons/quickstart.svg"
   link="/getting-started/quickstart"
 />
 
@@ -22,31 +22,31 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
 
 <VPCard
   title="Generated AsyncAPI Specs"
-  logo="https://mister-hope.com/logo.svg"
+  logo="/assets/icons/asyncapi.svg"
   link="/guides/generated-asyncapi-specs"
 />
 
 <VPCard
   title="Manage Configurations"
-  logo="https://mister-hope.com/logo.svg"
+  logo="/assets/icons/configuration.svg"
   link="/guides/manage-migrations"
 />
 
 <VPCard
   title="Manage Migrations"
-  logo="https://mister-hope.com/logo.svg"
+  logo="/assets/icons/migration.svg"
   link="/guides/manage-migrations"
 />
 
 <VPCard
   title="Manage Authentication"
-  logo="https://mister-hope.com/logo.svg"
+  logo="/assets/icons/authentication.svg"
   link="/guides/manage-authentication"
 />
 
 <VPCard
   title="User-Defined Functions"
-  logo="https://mister-hope.com/logo.svg"
+  logo="/assets/icons/custom function.svg"
   link="/guides/user-defined-function"
 />
 
@@ -54,13 +54,13 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
 
 <VPCard
   title="StreamPay"
-  logo="https://mister-hope.com/logo.svg"
+  logo="/assets/icons/streampay.svg"
   link="/sample-app/streampay"
 />
 
 <VPCard
   title="PetStore"
-  logo="https://mister-hope.com/logo.svg"
+  logo="/assets/icons/petstore.svg"
   link="/sample-app/petstore"
 />
 
@@ -68,18 +68,18 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
 
 <VPCard
   title="Troubleshooting"
-  logo="https://mister-hope.com/logo.svg"
+  logo="/assets/icons/troubleshoot.svg"
   link="/support/troubleshooting"
 />
 
 <VPCard
   title="FAQs"
-  logo="https://mister-hope.com/logo.svg"
+  logo="/assets/icons/faqs.svg"
   link="/support/faqs"
 />
 
 <VPCard
   title="Community Support"
-  logo="https://mister-hope.com/logo.svg"
+  logo="/assets/icons/support.svg"
   link="/support/community-support"
 />
