@@ -18,15 +18,6 @@ export const enSidebar = sidebar({
       link: "/api",
     },
     {
-      text: "Documentation",
-      children: [
-        {
-          text: "Introduction",
-          link: "/introduction.md",
-        },
-      ],
-    },
-    {
       text: "Getting Started",
       children: [
         {
@@ -47,19 +38,19 @@ export const enSidebar = sidebar({
           link: "/guides/generated-asyncapi-specs",
         },
         {
-          text: "Manage Configurations",
+          text: "Managing Zilla Service Configurations",
+          link: "/guides/manage-configurations",
+        },
+        {
+          text: "Managing Migrations",
           link: "/guides/manage-migrations",
         },
         {
-          text: "Manage Migrations",
-          link: "/guides/manage-migrations",
-        },
-        {
-          text: "Manage Authentication",
+          text: "Managing Authentication",
           link: "/guides/manage-authentication",
         },
         {
-          text: "User-Defined Functions",
+          text: "Managing User-Defined Function",
           link: "/guides/user-defined-function",
         },
       ],
