@@ -220,10 +220,29 @@ sup {
   gap: 1rem;
   background: none !important;  
   box-shadow: none !important;
-  border-color: #1b343f;
+  
   border-radius: 1rem;
   border-style: solid;
   border-width: 2px;
+
+  transition: all;
+  transition-duration: 200ms;
+}
+
+[data-theme="light"] .vp-card {
+  border-color: #38b7a7 !important;
+}
+
+[data-theme="dark"] .vp-card {
+  border-color: #1b343f !important;
+}
+
+[data-theme="light"] .vp-card:hover {
+  border-color: #1b343f !important;
+}
+
+[data-theme="dark"] .vp-card:hover {
+  border-color: #38b7a7 !important;
 }
 
 @media (max-width: 480px) {

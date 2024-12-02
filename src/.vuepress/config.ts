@@ -12,7 +12,7 @@ export default defineUserConfig({
   locales: {
     "/": {
       lang: "en-US",
-      title: "Documentation",
+      title: "Docs",
       description:
         "The official documentation for the aklivity/zillabase open-source project",
     },
