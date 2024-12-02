@@ -30,7 +30,7 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
   />
 
   <VPCard
-    title="Managing Configurations"
+    title="Managing Zilla Service Configurations"
     logo="/assets/icons/configuration.svg"
     link="/guides/manage-migrations"
   />

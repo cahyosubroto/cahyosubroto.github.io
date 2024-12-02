@@ -1,6 +1,45 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export const enSidebar = sidebar({
+  "/cli/": [
+    {
+      text: "Overview",
+      link: "/cli/overview",
+    },
+    {
+      text: "Help",
+      link: "/cli/help",
+    },
+    {
+      text: "Init",
+      link: "/cli/init",
+    },
+    {
+      text: "Start",
+      link: "/cli/start",
+    },
+
+    {
+      text: "Stop",
+      link: "/cli/stop",
+    },
+    {
+      text: "AsyncAPI",
+      link: "/cli/asyncapi",
+    },
+    {
+      text: "Config",
+      link: "/cli/config",
+    },
+    {
+      text: "Migration",
+      link: "/cli/migration",
+    },
+    {
+      text: "SSO",
+      link: "/cli/sso",
+    },
+  ],
   "/": [
     {
       icon: "/assets/icons/doc.svg",
@@ -10,7 +49,7 @@ export const enSidebar = sidebar({
     {
       icon: "/assets/icons/cli ref.svg",
       text: " CLI Documentation",
-      link: "/cli",
+      link: "/cli/overview",
     },
     {
       icon: "/assets/icons/api ref.svg",

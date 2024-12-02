@@ -1,12 +1,12 @@
-# Start
+# Init
 
-This command starts the Zillabase containers for the local project development.
+This command initializes a new Zillabase folder with an empty `config.yaml` and `seed.sql` file.
 
 
 ## Usage
 
 ```sh
-zillabase start [ --debug ] [ {-h | --help} ]
+zillabase init [ --debug ] [ {-h | --help} ]
 ```
 
 
