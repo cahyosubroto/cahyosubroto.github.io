@@ -54,7 +54,7 @@ export const enSidebar = sidebar({
     {
       icon: "/assets/icons/api ref.svg",
       text: " API Documentation",
-      link: "/api",
+      link: "/api/api-reference",
     },
     {
       text: "Getting Started",
