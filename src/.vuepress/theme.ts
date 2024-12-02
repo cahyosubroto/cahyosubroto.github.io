@@ -1,5 +1,4 @@
 import { hopeTheme } from "vuepress-theme-hope";
-
 import { enNavbar } from "./navbar/index.js";
 import { enSidebar } from "./sidebar/index.js";
 import { hostnameSEO, docsRepo } from "./env.js";
