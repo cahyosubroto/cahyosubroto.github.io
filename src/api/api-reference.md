@@ -13,4 +13,10 @@ comment: false
 toc: false
 ---
 
+<style>
+.theme-hope-content:not(.custom) {
+  max-width: unset !important;
+}
+</style>
+
 <LocalPlatformApiReference />

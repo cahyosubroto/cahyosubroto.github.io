@@ -8,7 +8,9 @@ export default hopeTheme({
 
   iconAssets: ["fontawesome-with-brands"],
 
-  logo: "/logo.png",
+  // logo: "/logo.png",
+  logo: "/logo.webp",
+  logoDark: "/logo-dark.webp",
   favicon: "/favicon.ico",
 
   repo: "aklivity/zillabase",
@@ -22,8 +24,8 @@ export default hopeTheme({
 
   navbarLayout: {
     start: ["Brand"],
-    // center: ["Search"],
-    end: ["Links", "Repo", "Outlook"],
+    center: ["Search", "Repo", "Outlook"],
+    end: ["Links"],
   },
 
   pageInfo: ["Category", "Tag"],
@@ -195,6 +197,8 @@ export default hopeTheme({
     //     ],
     //   },
     // },
+
+    searchPro: true
 
     // install @vuepress/plugin-revealjs and uncomment these if you need slides
     // revealjs: {

@@ -8,9 +8,9 @@ const isDarkMode = computed(() => !!instance?.proxy?.$isDarkmode || false);
 </script>
 
 <style lang="css">
-:root {
+/* :root {
   --content-width: 1280px !important;
-}
+} */
 
 /* these styles, although taken from theme for scalar docusaurus but somehow fixed dark/light mode inconsistency bug in scalar */
 html[data-theme='light'] body,

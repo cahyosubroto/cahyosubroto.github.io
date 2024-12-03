@@ -53,7 +53,7 @@ export const enSidebar = sidebar({
     },
     {
       icon: "/assets/icons/api ref.svg",
-      text: " API Documentation",
+      text: " API Reference",
       link: "/api/api-reference",
     },
     {
@@ -77,19 +77,19 @@ export const enSidebar = sidebar({
           link: "/guides/generated-asyncapi-specs",
         },
         {
-          text: "Managing Zilla Service Configurations",
+          text: "Zilla Service Configurations",
           link: "/guides/manage-configurations",
         },
         {
-          text: "Managing Migrations",
+          text: "Migrations",
           link: "/guides/manage-migrations",
         },
         {
-          text: "Managing Authentication",
+          text: "Authentication",
           link: "/guides/manage-authentication",
         },
         {
-          text: "Managing User-Defined Function",
+          text: "User-Defined Function",
           link: "/guides/user-defined-function",
         },
       ],

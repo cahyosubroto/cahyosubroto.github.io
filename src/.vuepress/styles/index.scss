@@ -21,6 +21,7 @@ html[data-theme="light"] #app {
   }
 }
 
+
 // make bash code blocks have $ prefix
 div.language-bash pre {
   padding-left: 0.8rem;
@@ -102,7 +103,7 @@ h6 {
     border-bottom: solid thin var(--border-color);
     border-radius: 0;
     .vp-sidebar-title {
-      font-size: 1.3em;
+      font-size: 1.1em;
       font-weight: 600;
     }
   }
@@ -258,4 +259,54 @@ sup {
 
 .vp-card hr {
   display: none !important;
+}
+
+.vp-navbar:not(.auto-hide) {
+  flex-wrap: wrap;
+  height: unset !important;
+}
+
+.vp-navbar:not(.auto-hide) .vp-navbar-start, .vp-navbar:not(.auto-hide) .vp-navbar-center, .vp-navbar:not(.auto-hide) .vp-navbar-end {
+  flex: 0 0 50%;
+  box-sizing: border-box;
+}
+
+.vp-navbar:not(.auto-hide) .vp-navbar-center {
+  display: flex;
+  justify-content: end;
+}
+
+.vp-navbar-center div {
+  width: unset !important;
+}
+
+.vp-navbar:not(.auto-hide) .vp-navbar-end {
+  padding-top: 0.5rem;
+  justify-content: start !important;
+}
+
+@media (min-width: 719px) {
+  .vp-sidebar {
+    padding-top: 2rem;
+  }
+
+  #main-content {
+    padding-top: 6.5rem;
+  }
+}
+
+[data-theme="light"] .vp-sidebar-link:hover:not(.active) {
+  color: black;
+}
+
+[data-theme="dark"] .vp-sidebar-link:hover:not(.active) {
+  color: white;
+}
+
+.vp-sidebar-link .icon:hover {
+  color: #32a4d6;
+}
+
+.vp-sidebar-link .icon img {
+  fill: currentColor;
 }

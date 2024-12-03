@@ -6,7 +6,7 @@ export const enNavbar = navbar([
     link: "cli/overview",
   },
   {
-    text: "API Documentation",
+    text: "API Reference",
     link: "api/api-reference",
   },
 ]);
