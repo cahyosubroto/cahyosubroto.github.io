@@ -309,6 +309,16 @@ sup {
   padding-right: max(calc(var(--sidebar-space) - var(--sidebar-width)), 0.5rem);
 }
 
+.theme-hope-content {
+  text-align: left !important;
+}
+
+.theme-hope-content:not(.custom) > p,
+.theme-hope-content:not(.custom) > ul p,
+.theme-hope-content:not(.custom) > ol p {
+  text-align: left !important;
+}
+
 .vp-sidebar-link .icon:hover {
   color: #32a4d6;
 }
