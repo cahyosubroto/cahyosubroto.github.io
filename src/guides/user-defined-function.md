@@ -12,12 +12,90 @@ Let's get deeper into the explanation for each UDF.
 
 ## Embedded User-Defined functions
 
-Todo
+In embedded functions, the function implementation is defined in the SQL function definition. Unlike external UDF, embedded UDF is run internally in Risingwave, so it does not offer as much flexibility as external UDF does. Because of this, embedded UDF are limited for computational purposes only and do not have access to external networks.
+
+### Example
+
+These steps will walk you through the UDF example in Python.
+
+1. Create an empty folder.
+
+```sh
+mkdir udf-embedded  # create a new folder
+cd udf-embedded # change the current directory
+```
+
+2. Initialize an empty Zillabase project.
+
+```sh
+zillabase init
+```
+
+3. Create a new migration file.
+
+```sh
+zillabase migration add create_function
+```
+
+4. Define the function in the migration file.
+
+```sql
+CREATE FUNCTION gcd(a int, b int) RETURNS int LANGUAGE python AS $$
+def gcd(a, b):
+    while b != 0:
+        a, b = b, a % b
+    return a
+$$;
+```
+
+5. Run the project.
+
+```sh
+zillabase start
+```
+
+6. Connect to the database with PSQL.
+
+```sh
+psql -U root -d dev -h localhost -p 4567
+```
+
+::: info
+If you don't have psql installed, install it with the following commands:
+
+Debian:
+
+```sh
+sudo apt-get install -y postgresql-client
+```
+
+MacOS:
+
+```sh
+brew install libpq
+```
+
+:::
+
+7. Run a query.
+
+```sql
+select gcd(12, 4);
+```
+
+10. Stop the project.
+
+```sh
+zillabase stop
+```
 
 ## External User-Defined Functions in Python
 
 To declare the function in Python, we'll use the [`arrow-udf`](https://pypi.org/project/arrow-udf/) package. You'll need to annotate the function that you want to expose, and then define the input and return types. On the other hand, you can also provide `requirements.txt` file in the `zillabase/functions/python` path in case you want to install additional Python packages. After that, you need to declare the function in a migration file.
 
+::: info
+Any external UDFs written in Python must be stored in `zillabase/functions/python` directory in order to be auto-picked by the Python UDF server.
+:::
 
 ### Adding Environment Variables
 
@@ -150,6 +228,9 @@ Refer to [this repository](https://github.com/aklivity/zillabase/tree/develop/ex
 
 To declare the function in Java, we'll use the `risingwave-udf` package. Your function will need to implement an interface to expose it as UDF. You can also add additional packages to the Maven project. After that, you need to declare the function in a migration file.
 
+::: info
+Any external UDFs written in Java must be in a Maven project form and stored in `zillabase/functions/java` directory in order to be auto-picked by the Java UDF server.
+:::
 
 ### Adding Environment Variables
 

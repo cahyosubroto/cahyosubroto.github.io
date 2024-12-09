@@ -18,7 +18,6 @@ export const enSidebar = sidebar({
       text: "Start",
       link: "/cli/start",
     },
-
     {
       text: "Stop",
       link: "/cli/stop",
@@ -94,42 +93,35 @@ export const enSidebar = sidebar({
         },
       ],
     },
-    {
-      text: "Sample Application",
-      children: [
-        {
-          text: "StreamPay",
-          link: "/sample-app/streampay",
-        },
-        {
-          text: "PetStore",
-          link: "/sample-app/petstore",
-        },
-      ],
-    },
-    {
-      text: "Support",
-      children: [
-        {
-          text: "Troubleshooting",
-          link: "/support/troubleshooting",
-        },
-        {
-          text: "FAQs",
-          link: "/support/faqs",
-        },
-        {
-          text: "Community Support",
-          link: "/support/community-support",
-        },
-      ],
-    },
-    // "",
     // {
-    //   text: "Docs",
-    //   icon: "book",
-    //   prefix: "guide/",
-    //   children: "structure",
+    //   text: "Sample Application",
+    //   children: [
+    //     {
+    //       text: "StreamPay",
+    //       link: "/sample-app/streampay",
+    //     },
+    //     {
+    //       text: "PetStore",
+    //       link: "/sample-app/petstore",
+    //     },
+    //   ],
+    // },
+    // {
+    //   text: "Support",
+    //   children: [
+    //     {
+    //       text: "Troubleshooting",
+    //       link: "/support/troubleshooting",
+    //     },
+    //     {
+    //       text: "FAQs",
+    //       link: "/support/faqs",
+    //     },
+    //     {
+    //       text: "Community Support",
+    //       link: "/support/community-support",
+    //     },
+    //   ],
     // },
   ],
 });

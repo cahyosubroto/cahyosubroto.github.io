@@ -123,7 +123,7 @@ Please refer to the Keycloak or the other providers' documentation to get more c
 
 ```sh
 # adjust the values depending on your case
-zillabase sso add --provider google --client aktivity --alias google --realm zillabase --secret secret
+zillabase sso add --provider google --client aklivity --alias google --realm zillabase --secret secret
 
 # output
 # Identity Provider added successfully
@@ -135,7 +135,16 @@ zillabase sso add --provider google --client aktivity --alias google --realm zil
 zillabase sso list --realm zillabase
 
 # output
-# [{"alias":"google","internalId":"b288c0bd-0ad4-44a9-b103-363a4b8f2997","providerId":"google","enabled":true,"updateProfileFirstLoginMode":"on","trustEmail":false,"storeToken":false,"addReadTokenRoleOnCreate":false,"authenticateByDefault":false,"linkOnly":false,"hideOnLogin":false,"config":{"syncMode":"LEGACY","clientSecret":"**********","clientId":"aktivity"}}]
+# [
+#  {
+#    "alias": "google",
+#    "providerId": "google",
+#    "config": {
+#      "clientId": "aklivity"
+#    }
+#  }
+# ]
+
 ```
 
 4. To remove an SSO provider, use the following command.

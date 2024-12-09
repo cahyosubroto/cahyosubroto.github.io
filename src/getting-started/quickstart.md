@@ -7,7 +7,7 @@ Learn how to integrate Zillabase with your project quickly using Zillabase CLI.
 
 ## Prerequisites
 
-- Java 17+
+- Java 20+
 - Homebrew package manager
 - Docker
 
@@ -36,7 +36,7 @@ You can initialize a Zillabase project either from a new  project’s directory
 zillabase init
 ```
 
-The command will initialize a new Zillabase folder with a config.yaml and seed.sql file. The generated config.yaml is empty. We can define the Zillabase configuration before starting. 
+The command will initialize a new Zillabase folder with a config.yaml and seed.sql file. The config.yaml can be used to modify the Zillabase startup configuration, including authentication, environment variables, etc.
 
 ::: info
 The _seed.sql_ file is executed during the initialization of the project.
@@ -112,6 +112,10 @@ def calculate_score(activity: str):
     return random.randint(-5, 5)
 ```
 
+::: info
+Any external UDFs written in Python must be stored in `zillabase/functions/python` directory in order to be auto-picked by the Python UDF server.
+:::
+
 2. Next, we'll have to define the function in our migration files.
 
 ```sh
@@ -126,13 +130,6 @@ zillabase migration add define_function
 
 CREATE FUNCTION calculate_score(varchar) RETURNS int
 LANGUAGE python AS calculate_score;
-```
-
-3. Edit the seed.sql file and add the following lines.
-
-```sql
-INSERT INTO users (id, name) VALUES ('allen', 'allen');
-INSERT INTO users (id, name) VALUES ('bertollo', 'bertollo');
 ```
 
 ### Step 4: Calling the Function (OPTIONAL)
@@ -185,8 +182,16 @@ keycloak:
       - http://localhost:8084/*
 ```
 
+### Step 6: Pre-Populate Data During Startup (OPTIONAL)
 
-### Step 6: Start Zillabase
+You can pre-populate data during startup by modifying the `seed.sql` file. This file will be run after the database migration is completed. In this example, modify the `seed.sql` file with the following content:
+
+```sql
+INSERT INTO users (id, name) VALUES ('allen', 'allen');
+INSERT INTO users (id, name) VALUES ('bertollo', 'bertollo');
+```
+
+### Step 7: Start Zillabase
 
 1. Start Zillabase with the following command and wait for the initialization to finish.
 
@@ -212,7 +217,7 @@ zillabase asyncapi show http-asyncapi >> asyncapi_REST_APIs.yaml
 3. Once you have started Zillabase and generated your AsyncAPI schema, you can copy it into the [AsyncAPI Studio](https://studio.asyncapi.com/) to see a full list of all the streaming APIs you have created.
 
 
-### Step 7: Testing the Endpoints
+### Step 8: Testing the Endpoints
 
 1. Authenticate through Keycloak to get the access token.
 
@@ -241,7 +246,7 @@ curl -X GET 'http://localhost:8080/activity_scores' \
 ```
 
 
-### Step 8: Stop Zillabase
+### Step 9: Stop Zillabase
 
 You can stop Zillabase with the following command:
 
