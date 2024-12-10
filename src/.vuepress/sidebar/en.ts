@@ -41,21 +41,6 @@ export const enSidebar = sidebar({
   ],
   "/": [
     {
-      icon: "/assets/icons/doc.svg",
-      text: " Documentation",
-      link: "/",
-    },
-    {
-      icon: "/assets/icons/cli ref.svg",
-      text: " CLI Documentation",
-      link: "/cli/overview",
-    },
-    {
-      icon: "/assets/icons/api ref.svg",
-      text: " API Reference",
-      link: "/api/api-reference",
-    },
-    {
       text: "Getting Started",
       children: [
         {
