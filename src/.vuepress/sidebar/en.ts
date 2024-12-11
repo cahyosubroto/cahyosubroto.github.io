@@ -39,6 +39,100 @@ export const enSidebar = sidebar({
       link: "/cli/sso",
     },
   ],
+  "/products/zilla": [
+    {
+      text: "Generated AsyncAPI Specs",
+      link: "/products/zilla/generated-asyncapi-specs",
+    },
+    {
+      text: "Endpoint Calls Example",
+      link: "/products/zilla/endpoint-calls",
+    },
+    {
+      text: "Zilla Service Configurations",
+      link: "/products/zilla/manage-configurations",
+    },
+  ],
+  "/products/table": [
+    {
+      text: "Defining Table",
+      link: "/products/table/defining-table",
+    },
+    {
+      text: "Initializing Database with Seeder",
+      link: "/products/table/seeding-database",
+    },
+  ],
+  "/products/view": [
+    {
+      text: "Defining View",
+      link: "/products/view/defining-view",
+    },
+    {
+      text: "Defining Materialized View",
+      link: "/products/view/defining-materialized-view",
+    },
+  ],
+  "/products/stream": [
+    {
+      text: "Defining Stream",
+      link: "/products/stream/defining-stream",
+    },
+  ],
+  "/products/function": [
+    {
+      text: "User Defined Function (UDF)",
+      link: "/products/function/user-defined-function",
+    },
+    {
+      text: "Defining Function",
+      link: "/products/function/defining-function",
+    },
+    {
+      text: "Embedded UDF",
+      link: "/products/function/embedded-udf",
+    },
+    {
+      text: "External UDF in Java",
+      link: "/products/function/external-udf-java",
+    },
+    {
+      text: "External UDF in Python",
+      link: "/products/function/external-udf-python",
+    },
+  ],
+  "/products/authentication": [
+    {
+      text: "Authentication in Zillabase",
+      link: "/products/authentication/concepts",
+    },
+    {
+      text: "Authentication Configuration",
+      link: "/products/authentication/configuration",
+    },
+    {
+      text: "Obtaining Authenticated User",
+      link: "/products/authentication/obtain-user",
+    },
+    {
+      text: "Managing Single Sign On (SSO)",
+      link: "/products/authentication/managing-sso",
+    },
+  ],
+  "/products/storage": [
+    {
+      text: "Storage in Zillabase",
+      link: "/products/storage/concepts",
+    },
+    {
+      text: "Managing Bucket",
+      link: "/products/storage/bucket",
+    },
+    {
+      text: "Managing Object",
+      link: "/products/storage/object",
+    },
+  ],
   "/": [
     {
       text: "Getting Started",
@@ -54,28 +148,36 @@ export const enSidebar = sidebar({
       ],
     },
     {
-      text: "Guides",
+      text: "Products",
       children: [
         {
-          text: "Generated AsyncAPI Specs",
-          link: "/guides/generated-asyncapi-specs",
+          text: "Zilla",
+          link: "/products/zilla/generated-asyncapi-specs",
         },
         {
-          text: "Zilla Service Configurations",
-          link: "/guides/manage-configurations",
+          text: "Table",
+          link: "/products/table/defining-table",
         },
         {
-          text: "Migrations",
-          link: "/guides/manage-migrations",
+          text: "View",
+          link: "/products/view/defining-view",
+        },
+        {
+          text: "Stream",
+          link: "/products/stream/defining-stream",
+        },
+        {
+          text: "Function",
+          link: "/products/function/user-defined-function",
         },
         {
           text: "Authentication",
-          link: "/guides/manage-authentication",
+          link: "/products/authentication/concepts",
         },
-        {
-          text: "User-Defined Function",
-          link: "/guides/user-defined-function",
-        },
+        // {
+        //   text: "Storage",
+        //   link: "/products/storage/concepts",
+        // },
       ],
     },
     // {
