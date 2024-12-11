@@ -20,38 +20,51 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
   />
 </div>
 
-## Guides
+## Products
 
 <div class="cards">
   <VPCard
-    title="Generated AsyncAPI Specs"
+    title="Zilla"
     logo="/assets/icons/asyncapi.svg"
-    link="/guides/generated-asyncapi-specs"
+    link="/products/zilla/generated-asyncapi-specs"
   />
 
   <VPCard
-    title="Zilla Service Configurations"
+    title="Table"
     logo="/assets/icons/configuration.svg"
-    link="/guides/manage-migrations"
+    link="/products/table/defining-table"
   />
 
   <VPCard
-    title="Migrations"
+    title="View"
     logo="/assets/icons/migration.svg"
-    link="/guides/manage-migrations"
+    link="/products/view/defining-view"
+  />
+
+  <VPCard
+    title="Stream"
+    logo="/assets/icons/migration.svg"
+    link="/products/stream/defining-stream"
+  />
+
+  <VPCard
+    title="Function"
+    logo="/assets/icons/custom function.svg"
+    link="/products/function/user-defined-function"
   />
 
   <VPCard
     title="Authentication"
     logo="/assets/icons/authentication.svg"
-    link="/guides/manage-authentication"
+    link="/products/authentication/concepts"
   />
 
-  <VPCard
-    title="User-Defined Functions"
-    logo="/assets/icons/custom function.svg"
-    link="/guides/user-defined-function"
-  />
+  <!-- <VPCard
+    title="Storage"
+    logo="/assets/icons/authentication.svg"
+    link="/products/storage/concepts"
+  /> -->
+
 </div>
 
 <!-- ## Sample Application
