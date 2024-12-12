@@ -254,6 +254,7 @@ sup {
 .vp-card-logo {
   height: 1.5rem;
   width: auto;
+  border-radius: 0% !important;
 }
 
 .vp-card hr {
@@ -309,4 +310,45 @@ sup {
 .theme-hope-content:not(.custom) > ul p,
 .theme-hope-content:not(.custom) > ol p {
   text-align: left !important;
+}
+
+.vp-sidebar img.icon {
+  height: 1.25rem;
+  width: 1.25rem;
+  margin-inline-end: 0.5rem;
+}
+
+.vp-sidebar-link img.icon {
+  width: 1.1rem;
+  padding: 5px;
+  margin-bottom: -7px;
+}
+
+[data-theme="light"] .vp-sidebar-link:hover:not(.active) {
+  color: black;
+
+  .icon {
+    filter: grayscale(1) brightness(0);
+  }
+}
+
+[data-theme="dark"] .vp-sidebar-link:hover:not(.active) {
+  color: white;
+
+  .icon {
+    filter: grayscale(1) brightness(10);
+    outline-width: 0px;
+  }
+}
+
+.vp-sidebar-link img.icon:hover {
+  color: #32a4d6;
+}
+
+.vp-sidebar-group:not(.vp-sidebar-group .vp-sidebar-group) {
+  margin-left: 0.5rem;
+}
+
+.vp-sidebar-title {
+  margin-left: 0.25rem;
 }

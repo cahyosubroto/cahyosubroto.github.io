@@ -41,6 +41,12 @@ export const enSidebar = sidebar({
   ],
   "/products/zilla": [
     {
+      text: "Zilla",
+      link: "/",
+      icon: "fa-solid fa-chevron-left",
+      children: [],
+    },
+    {
       text: "Generated AsyncAPI Specs",
       link: "/products/zilla/generated-asyncapi-specs",
     },
@@ -68,6 +74,12 @@ export const enSidebar = sidebar({
   ],
   "/products/table": [
     {
+      text: "Table",
+      link: "/",
+      icon: "fa-solid fa-chevron-left",
+      children: [],
+    },
+    {
       text: "Defining Table",
       link: "/products/table/defining-table",
     },
@@ -77,6 +89,12 @@ export const enSidebar = sidebar({
     },
   ],
   "/products/view": [
+    {
+      text: "VIew",
+      link: "/",
+      icon: "fa-solid fa-chevron-left",
+      children: [],
+    },
     {
       text: "Defining View",
       link: "/products/view/defining-view",
@@ -88,11 +106,23 @@ export const enSidebar = sidebar({
   ],
   "/products/stream": [
     {
+      text: "Stream",
+      link: "/",
+      icon: "fa-solid fa-chevron-left",
+      children: [],
+    },
+    {
       text: "Defining Stream",
       link: "/products/stream/defining-stream",
     },
   ],
   "/products/function": [
+    {
+      text: "Function",
+      link: "/",
+      icon: "fa-solid fa-chevron-left",
+      children: [],
+    },
     {
       text: "User Defined Function (UDF)",
       link: "/products/function/user-defined-function",
@@ -115,6 +145,12 @@ export const enSidebar = sidebar({
     },
   ],
   "/products/authentication": [
+    {
+      text: "Authentication",
+      link: "/",
+      icon: "fa-solid fa-chevron-left",
+      children: [],
+    },
     {
       text: "Authentication in Zillabase",
       link: "/products/authentication/concepts",
@@ -142,6 +178,12 @@ export const enSidebar = sidebar({
     },
   ],
   "/products/storage": [
+    {
+      text: "Storage",
+      link: "/",
+      icon: "fa-solid fa-chevron-left",
+      children: [],
+    },
     {
       text: "Storage in Zillabase",
       link: "/products/storage/concepts",
@@ -184,30 +226,37 @@ export const enSidebar = sidebar({
         {
           text: "Zilla",
           link: "/products/zilla/generated-asyncapi-specs",
+          icon: "/assets/icons/zilla.svg",
         },
         {
           text: "Table",
           link: "/products/table/defining-table",
+          icon: "/assets/icons/table.svg",
         },
         {
           text: "View",
           link: "/products/view/defining-view",
+          icon: "/assets/icons/views.svg",
         },
         {
           text: "Stream",
           link: "/products/stream/defining-stream",
+          icon: "/assets/icons/streams.svg",
         },
         {
           text: "Function",
           link: "/products/function/user-defined-function",
+          icon: "/assets/icons/function.svg",
         },
         {
           text: "Authentication",
           link: "/products/authentication/concepts",
+          icon: "/assets/icons/auth.svg",
         },
         // {
         //   text: "Storage",
         //   link: "/products/storage/concepts",
+        //   icon: "/assets/icons/storage.svg",
         // },
       ],
     },
