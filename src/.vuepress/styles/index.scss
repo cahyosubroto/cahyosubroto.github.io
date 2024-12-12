@@ -352,3 +352,14 @@ sup {
 .vp-sidebar-title {
   margin-left: 0.25rem;
 }
+
+#main-content:has(.scalar-app) .theme-hope-content {
+  padding-left: max(
+    calc(var(--sidebar-space) - var(--sidebar-width)),
+    0.5rem
+  ) !important;
+  padding-right: max(
+    calc(var(--sidebar-space) - var(--sidebar-width)),
+    0.5rem
+  ) !important;
+}
