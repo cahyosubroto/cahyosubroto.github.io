@@ -1,12 +1,12 @@
 # Defining Function
 
-Zillabase provides commands to manage data model migrations. Database migration applies changes to the database schema, including tables, views, streams, etc. The Zillabase CLI migration commands help users create an empty migration file that can later be modified to define data models and streams. This migration file format is in SQL format and compatible with PostgreSQL syntax. Under the hood, it uses Risingwave, which acts as a "database" (a streaming database compatible with PostgreSQL-like syntax, to be exact). 
+Zillabase provides powerful tools for managing database migrations, including the ability to define custom functions. Users can create an empty migration file using the CLI to write PostgreSQL-like SQL that defines custom functions. These functions enable advanced data transformations and logic within the database. Backed by Risingwave, Zillabase ensures robust support for functions in a streaming database environment.
+
+Zillabase supports SQL functions, embedded functions (functions defined in SQL), and external user-defined functions (UDF) to accommodate business logic that cannot be covered with regular SQL. Currently, we support embedded functions written in Javascript, Python, and Rust and external user-defined functions written in Java and Python.
 
 ::: info
 You can refer to [this article](https://docs.risingwave.com/sql/overview) for a complete supported SQL reference.
 :::
-
-Zillabase supports SQL functions, embedded functions (functions that are defined in SQL), and external user-defined functions (UDF) to accommodate business logic that cannot be covered with regular SQL. Currently, we support embedded functions written in Javascript, Python, and Rust and external user-defined functions written in Java and Python.
 
 1. Create the migration file with the following command:
 

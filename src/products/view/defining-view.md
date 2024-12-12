@@ -1,6 +1,6 @@
 # Defining View
 
-Zillabase provides commands to manage data model migrations. Database migration applies changes to the database schema, including tables, views, streams, etc. The Zillabase CLI migration commands help users create an empty migration file that can later be modified to define data models and streams. This migration file format is in SQL format and compatible with PostgreSQL syntax. Under the hood, it uses Risingwave, which acts as a "database" (a streaming database compatible with PostgreSQL-like syntax, to be exact). 
+Zillabase facilitates database migrations through an intuitive set of CLI commands. These migrations allow users to define or modify views within the database schema. By generating an empty migration file with Zillabase CLI, users can write PostgreSQL-compatible syntax to specify definitions of their views. RisingWave non-materialized views behave the same as regular relational database views, with data source support from sources, tables, views, or indexes.
 
 ::: info
 You can refer to [this article](https://docs.risingwave.com/sql/overview) for a complete supported SQL reference.

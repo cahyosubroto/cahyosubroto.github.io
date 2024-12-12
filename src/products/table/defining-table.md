@@ -1,6 +1,6 @@
 # Defining Table
 
-Zillabase provides commands to manage data model migrations. Database migration applies changes to the database schema, including tables, views, streams, etc. The Zillabase CLI migration commands help users create an empty migration file that can later be modified to define data models and streams. This migration file format is in SQL format and compatible with PostgreSQL syntax. Under the hood, it uses Risingwave, which acts as a "database" (a streaming database compatible with PostgreSQL-like syntax, to be exact). 
+Zillabase offers commands to streamline managing database migrations, which define or modify the database schema. Using the Zillabase CLI, users can generate an empty SQL-based migration file. This file can then be customized to include table definitions. Defining a table will create a Kafka topic with the same name, and RisingWave will provide an interface compatible with PostgreSQL-like syntax. Zillabase leverages Risingwave, a streaming database, to support these migrations with a PostgreSQL-like interface.
 
 ::: info
 You can refer to [this article](https://docs.risingwave.com/sql/overview) for a complete supported SQL reference.
