@@ -90,7 +90,7 @@ export const enSidebar = sidebar({
   ],
   "/products/view": [
     {
-      text: "VIew",
+      text: "View",
       link: "/",
       icon: "fa-solid fa-chevron-left",
       children: [],
