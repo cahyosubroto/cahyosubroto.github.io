@@ -284,10 +284,10 @@ export const enSidebar = sidebar({
           text: "FAQs",
           link: "/support/faqs",
         },
-        // {
-        //   text: "Community Support",
-        //   link: "/support/community-support",
-        // },
+        {
+          text: "Community Support",
+          link: "/support/community-support",
+        },
       ],
     },
   ],

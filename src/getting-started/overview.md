@@ -98,9 +98,9 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
     link="/support/faqs"
   />
 
-  <!-- <VPCard
+  <VPCard
     title="Community Support"
     logo="/assets/icons/support.svg"
     link="/support/community-support"
-  /> -->
+  />
 </div>
