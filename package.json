@@ -27,6 +27,7 @@
     "vuepress-theme-hope": "2.0.0-rc.59"
   },
   "dependencies": {
-    "@scalar/api-reference": "^1.25.72"
+    "@scalar/api-reference": "^1.25.72",
+    "mermaid": "^11.4.1"
   }
 }

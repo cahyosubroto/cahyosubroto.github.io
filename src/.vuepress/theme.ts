@@ -128,7 +128,7 @@ export default hopeTheme({
       // gfm: true,
 
       // Install mermaid before enabling it
-      // mermaid: true,
+      mermaid: true,
 
       // playground: {
       //   presets: ["ts", "vue"],
