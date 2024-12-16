@@ -67,30 +67,30 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
 
 </div>
 
-<!-- ## Sample Application
+## Sample Application
 
 <div class="cards">
   <VPCard
-    title="StreamPay"
-    logo="/assets/icons/streampay.svg"
-    link="/sample-app/streampay"
-  />
-
-  <VPCard
-    title="PetStore"
+    title="Petstore"
     logo="/assets/icons/petstore.svg"
     link="/sample-app/petstore"
   />
+
+  <!-- <VPCard
+    title="StreamPay"
+    logo="/assets/icons/streampay.svg"
+    link="/sample-app/streampay"
+  /> -->
 </div>
 
 ## Support
 
 <div class="cards">
-  <VPCard
+  <!-- <VPCard
     title="Troubleshooting"
     logo="/assets/icons/troubleshoot.svg"
     link="/support/troubleshooting"
-  />
+  /> -->
 
   <VPCard
     title="FAQs"
@@ -98,9 +98,9 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
     link="/support/faqs"
   />
 
-  <VPCard
+  <!-- <VPCard
     title="Community Support"
     logo="/assets/icons/support.svg"
     link="/support/community-support"
-  />
-</div> -->
+  /> -->
+</div>

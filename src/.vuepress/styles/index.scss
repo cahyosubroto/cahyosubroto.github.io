@@ -363,3 +363,15 @@ sup {
     0.5rem
   ) !important;
 }
+
+:root {
+  --hint-font-size: 1rem !important;
+}
+
+.hint-container.details p {
+  font-size: 1rem !important;
+}
+
+.hint-container.details summary {
+  font-weight: 600;
+}
