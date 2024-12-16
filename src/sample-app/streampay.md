@@ -53,8 +53,8 @@ cd examples/streampay
 
 ```yaml
 udf:
-  python:
-    env:
+  python:
+    env:
       - OPENAI_API_KEY=<your OpenAI API key>
 ```
 
@@ -114,18 +114,18 @@ Once the generated AsyncAPI schema is exported, you can copy it into the [AsyncA
 
 Some of the endpoints described are:
 
-| Method | Endpoint                           | Topic                          | Description                                  |
+| Method | Endpoint                           | Topic                          | Description                                  |
 | ------ | ---------------------------------- | ------------------------------ | -------------------------------------------- |
-| POST   | /streampay_users                   | dev.streampay_users            | Create an user.                              |
-| PUT    | /streampay_users/\{id}              | dev.streampay_users            | Update user by the key.                      |
-| GET    | /streampay_users                   | dev.streampay_users            | Fetch all users.                             |
-| GET    | /streampay_users/\{id}              | dev.streampay_users            | Fetch user by the key.                       |
-| GET    | /streampay_balances-stream         | dev.streampay_balances         | Stream latest user's balance.                |
-| POST   | /streampay_commands                | dev.streampay_commands         | Post command such as payment request or pay. |
-| GET    | /streampay_payment_requests        | dev.streampay_payment_requests | Fetch all payment requests.                  |
-| GET    | /streampay_payment_requests/\{id}   | dev.streampay_payment_requests | Fetch payment request by key.                |
-| GET    | /streampay_payment_requests-stream | dev.streampay_payment_requests | Stream new available payment request.        |
-| GET    | /streampay_activities-stream       | dev.streampay_activities       | Stream all the activities.                   |
+| POST   | /streampay_users                   | dev.streampay_users            | Create an user.                              |
+| PUT    | /streampay_users/\{id}              | dev.streampay_users            | Update user by the key.                      |
+| GET    | /streampay_users                   | dev.streampay_users            | Fetch all users.                             |
+| GET    | /streampay_users/\{id}              | dev.streampay_users            | Fetch user by the key.                       |
+| GET    | /streampay_balances-stream         | dev.streampay_balances         | Stream latest user's balance.                |
+| POST   | /streampay_commands                | dev.streampay_commands         | Post command such as payment request or pay. |
+| GET    | /streampay_payment_requests        | dev.streampay_payment_requests | Fetch all payment requests.                  |
+| GET    | /streampay_payment_requests/\{id}   | dev.streampay_payment_requests | Fetch payment request by key.                |
+| GET    | /streampay_payment_requests-stream | dev.streampay_payment_requests | Stream new available payment request.        |
+| GET    | /streampay_activities-stream       | dev.streampay_activities       | Stream all the activities.                   |
 
 ## Using the Project
 
@@ -135,12 +135,12 @@ Login using Keycloak with one of the users pre-created in `zillabase/config.yaml
 
 ```yaml
 keycloak:
-  realm: zillabase
-  users:
+  realm: zillabase
+  users:
   - username: allen
-    email: allen.doe@example.com
-    name: Allen Doe
-    password: Test@123
+    email: allen.doe@example.com
+    name: Allen Doe
+    password: Test@123
 ```
 
 You can log in from a different browser session to one of the other users to see how money is sent between them.

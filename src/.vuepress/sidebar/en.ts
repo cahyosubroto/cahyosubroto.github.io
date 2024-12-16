@@ -276,13 +276,13 @@ export const enSidebar = sidebar({
     {
       text: "Support",
       children: [
-        // {
-        //   text: "Troubleshooting",
-        //   link: "/support/troubleshooting",
-        // },
         {
           text: "FAQs",
           link: "/support/faqs",
+        },
+        {
+          text: "Troubleshooting",
+          link: "/support/troubleshooting",
         },
         {
           text: "Community Support",

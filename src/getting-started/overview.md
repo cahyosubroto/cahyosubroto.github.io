@@ -86,16 +86,16 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
 ## Support
 
 <div class="cards">
-  <!-- <VPCard
-    title="Troubleshooting"
-    logo="/assets/icons/troubleshoot.svg"
-    link="/support/troubleshooting"
-  /> -->
-
   <VPCard
     title="FAQs"
     logo="/assets/icons/faqs.svg"
     link="/support/faqs"
+  />
+
+  <VPCard
+    title="Troubleshooting"
+    logo="/assets/icons/troubleshoot.svg"
+    link="/support/troubleshooting"
   />
 
   <VPCard

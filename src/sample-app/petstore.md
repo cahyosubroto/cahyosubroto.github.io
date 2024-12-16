@@ -59,13 +59,13 @@ The Zillabase Petstore is an HTTP Kafka proxy that exposes common entity CRUD en
 
 ### Endpoints
 
-| Protocol | Method | Endpoint            | Topic         | Description            |
+| Protocol | Method | Endpoint            | Topic         | Description            |
 |----------|--------|---------------------|---------------|------------------------|
-| HTTP     | POST   | /petstore_pets      | petstore_pets | Create an entry.       |
-| HTTP     | PUT    | /petstore_pets/\{id} | petstore_pets | Update pet by the key. |
-| HTTP     | DELETE | /petstore_pets/\{id} | petstore_pets | Delete pet by the key. |
-| HTTP     | GET    | /petstore_pets      | petstore_pets | Fetch all pets.        |
-| HTTP     | GET    | /petstore_pets/\{id} | petstore_pets | Fetch pet by the key.  |
+| HTTP     | POST   | /petstore_pets      | petstore_pets | Create an entry.       |
+| HTTP     | PUT    | /petstore_pets/\{id} | petstore_pets | Update pet by the key. |
+| HTTP     | DELETE | /petstore_pets/\{id} | petstore_pets | Delete pet by the key. |
+| HTTP     | GET    | /petstore_pets      | petstore_pets | Fetch all pets.        |
+| HTTP     | GET    | /petstore_pets/\{id} | petstore_pets | Fetch pet by the key.  |
 
 Similarly, endpoints are available to manage customers using `/petstore_customers` & `/petstore_verified_customers`.
 
@@ -74,7 +74,7 @@ Similarly, endpoints are available to manage customers using `/petstore_customer
 #### Publish a valid record
 
 ```bash
-curl -k -v -X POST http://localhost:8080/petstore_pets -H 'Idempotency-Key: 1'  -H 'Content-Type: application/json' -d '{"id": "123", "breed": "Awesome Dog"}'
+curl -k -v -X POST http://localhost:8080/petstore_pets -H 'Idempotency-Key: 1'  -H 'Content-Type: application/json' -d '{"id": "123", "breed": "Awesome Dog"}'
 ```
 
 Output:
