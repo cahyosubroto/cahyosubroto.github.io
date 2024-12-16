@@ -1,6 +1,8 @@
 # Petstore Example
 
-The Petstore example project implements the common Petstore example, where requests are proxied to Kafka. Zilla implements the REST endpoints defined in an AsyncAPI 3.x spec and proxies them onto Kafka topics defined in an AsyncAPI 3.x spec based on the operations defined in each spec. HTTP AsyncAPI 3.x spec and Kafka AsyncAPI 3.x spec are generated automatically based on the Kafka Cluster metadata information.
+The Petstore example project implements the common Petstore example, where requests are proxied to Kafka. 
+
+Zilla implements the REST endpoints defined in an AsyncAPI 3.x spec and proxies them onto Kafka topics defined in an AsyncAPI 3.x spec based on the operations defined in each spec. HTTP AsyncAPI 3.x spec and Kafka AsyncAPI 3.x spec are generated automatically based on the Kafka Cluster metadata information.
 
 ## Prerequisites
 
@@ -9,6 +11,25 @@ Before we start, make sure you fulfill the following requirements:
 - Java 20+
 - Homebrew package manager
 - Docker
+- Zillabase CLI
+
+### Installing Zillabase CLI
+
+If you don't have Zillabase CLI installed, install it with the following command:
+
+```sh
+brew tap aklivity/tap
+
+brew install zillabase
+```
+
+::: info
+The Homebrew package manager is required. You can install it on MacOS and other Linux distributions. To install it, run the following command:
+
+```sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+:::
 
 ## Setting Up the Project
 
@@ -20,21 +41,13 @@ git clone https://github.com/aklivity/zillabase.git
 
 The Petstore project is stored in the `examples/petstore` directory.
 
-2. Install Zillabase.
-
-```sh
-brew tap aklivity/tap
-
-brew install zillabase
-```
-
-3. go to the `petstore` project example directory on the cloned repository directory.
+2. go to the `petstore` project example directory on the cloned repository directory.
 
 ```sh
 cd examples/petstore
 ```
 
-4. Start the project and wait for the initialization process to finish.
+3. Start the project and wait for the initialization process to finish.
 
 ```sh
 zillabase start

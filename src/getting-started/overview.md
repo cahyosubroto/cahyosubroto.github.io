@@ -2,7 +2,7 @@
 title: What is Zillabase?
 ---
 
-Zillabase is a modern alternative to Firebase, designed for real-time data processing and asynchronous workloads. It integrates a suite of streaming-native open-source tools to automatically build an event-drivent backend. This includes real-time data models, user-defined functions, robust security, and versatile APIs (supporting both RESTful and asynchronous interactions).
+Zillabase is a modern alternative to Firebase, designed for real-time data processing and asynchronous workloads. It integrates a suite of streaming-native open-source tools to automatically build an event-driven backend. This includes real-time data models, user-defined functions, robust security, and versatile APIs (supporting both RESTful and asynchronous interactions).
 
 ## Getting Started
 
@@ -76,11 +76,11 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
     link="/sample-app/petstore"
   />
 
-  <!-- <VPCard
+  <VPCard
     title="StreamPay"
     logo="/assets/icons/streampay.svg"
     link="/sample-app/streampay"
-  /> -->
+  />
 </div>
 
 ## Support

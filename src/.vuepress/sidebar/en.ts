@@ -267,10 +267,10 @@ export const enSidebar = sidebar({
           text: "Petstore",
           link: "/sample-app/petstore",
         },
-        // {
-        //   text: "StreamPay",
-        //   link: "/sample-app/streampay",
-        // },
+        {
+          text: "StreamPay",
+          link: "/sample-app/streampay",
+        },
       ],
     },
     {
