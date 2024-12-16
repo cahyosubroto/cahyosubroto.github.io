@@ -55,7 +55,7 @@ cd examples/streampay
 udf:
   python:
     env:
- - OPENAI_API_KEY=<your OpenAI API key>
+      - OPENAI_API_KEY=<your OpenAI API key>
 ```
 
 4. Start the Zillabase project and wait for the initialization process to finish.
@@ -137,10 +137,10 @@ Login using Keycloak with one of the users pre-created in `zillabase/config.yaml
 keycloak:
   realm: zillabase
   users:
- - username: allen
-      email: allen.doe@example.com
-      name: Allen Doe
-      password: Test@123
+  - username: allen
+    email: allen.doe@example.com
+    name: Allen Doe
+    password: Test@123
 ```
 
 You can log in from a different browser session to one of the other users to see how money is sent between them.
