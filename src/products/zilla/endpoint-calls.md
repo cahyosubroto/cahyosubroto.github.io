@@ -1,3 +1,7 @@
+---
+breadcrumb: false
+---
+
 # Endpoint Calls Example
 
 This example will go through all of the available endpoints for an entity using the Petstore project example. The project example provides the following endpoints:

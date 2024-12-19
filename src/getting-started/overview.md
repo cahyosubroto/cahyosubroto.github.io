@@ -20,7 +20,7 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
   />
 </div>
 
-## Products
+## Concepts
 
 <div class="cards">
   <VPCard
@@ -67,7 +67,7 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
 
 </div>
 
-## Sample Application
+## Examples
 
 <div class="cards">
   <VPCard

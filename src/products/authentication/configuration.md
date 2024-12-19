@@ -1,3 +1,7 @@
+---
+breadcrumb: false
+---
+
 # Authentication Configuration
 
 There are various configurable authentication options in Zillabase.

@@ -1,5 +1,8 @@
-# Embedded UDF
+---
+breadcrumb: false
+---
 
+# Embedded UDF
 
 In embedded functions, the function implementation is defined in the SQL function definition. Unlike external UDF, embedded UDF is run internally in Risingwave, so it does not offer as much flexibility as external UDF does. Because of this, embedded UDF are limited for computational purposes only and do not have access to external networks.
 

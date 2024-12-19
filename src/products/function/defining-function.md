@@ -1,3 +1,7 @@
+---
+breadcrumb: false
+---
+
 # Defining Function
 
 Zillabase provides powerful tools for managing database migrations, including the ability to define custom functions. Users can create an empty migration file using the CLI to write PostgreSQL-like SQL that defines custom functions. These functions enable advanced data transformations and logic within the database. Backed by Risingwave, Zillabase ensures robust support for functions in a streaming database environment.

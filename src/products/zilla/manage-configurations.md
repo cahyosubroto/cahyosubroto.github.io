@@ -1,3 +1,6 @@
+---
+breadcrumb: false
+---
 
 # Zilla Service Configuration
 

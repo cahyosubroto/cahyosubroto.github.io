@@ -1,8 +1,6 @@
 
 # Quickstart
 
-![](/assets/docs/quickstart/quickstart.png)
-
 Learn how to integrate Zillabase with your project quickly using Zillabase CLI.
 
 ## Prerequisites

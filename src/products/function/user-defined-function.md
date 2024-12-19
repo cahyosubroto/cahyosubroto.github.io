@@ -1,3 +1,7 @@
+---
+breadcrumb: false
+---
+
 # User Defined Function (UDF)
 
 Zillabase supports SQL functions, embedded functions (functions that are defined in SQL), and external user-defined functions (UDF) to accommodate business logic that cannot be covered with regular SQL. Currently, we support embedded functions written in Javascript, Python, and Rust and external user-defined functions written in Java and Python.

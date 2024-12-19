@@ -1,3 +1,7 @@
+---
+breadcrumb: false
+---
+
 # Obtaining Authenticated User
 
 To obtain an authenticated user on view or stream, you can use `zilla_identity` variable in the query. For example:

@@ -11,9 +11,9 @@ export const enNavbar = navbar([
     link: "cli/overview",
     activeMatch: "^\/cli\/.*"
   },
-  {
-    text: "API Reference",
-    link: "api/api-reference",
-    activeMatch: "^\/api\/.*"
-  },
+  // {
+  //   text: "API Reference",
+  //   link: "api/api-reference",
+  //   activeMatch: "^\/api\/.*"
+  // },
 ]);

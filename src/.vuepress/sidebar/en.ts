@@ -58,19 +58,19 @@ export const enSidebar = sidebar({
       text: "Zilla Service Configurations",
       link: "/products/zilla/manage-configurations",
     },
-    {
-      text: "References",
-      children: [
-        {
-          text: "AsyncAPI API",
-          link: "/api/api-reference.html#tag/asyncapis",
-        },
-        {
-          text: "Config API",
-          link: "/api/api-reference.html#tag/config",
-        },
-      ],
-    },
+    // {
+    //   text: "References",
+    //   children: [
+    //     {
+    //       text: "AsyncAPI API",
+    //       link: "/api/api-reference.html#tag/asyncapis",
+    //     },
+    //     {
+    //       text: "Config API",
+    //       link: "/api/api-reference.html#tag/config",
+    //     },
+    //   ],
+    // },
   ],
   "/products/table": [
     {
@@ -167,15 +167,15 @@ export const enSidebar = sidebar({
       text: "Managing Single Sign On (SSO)",
       link: "/products/authentication/managing-sso",
     },
-    {
-      text: "References",
-      children: [
-        {
-          text: "Authentication API",
-          link: "/api/api-reference.html#tag/auth",
-        },
-      ],
-    },
+    // {
+    //   text: "References",
+    //   children: [
+    //     {
+    //       text: "Authentication API",
+    //       link: "/api/api-reference.html#tag/auth",
+    //     },
+    //   ],
+    // },
   ],
   "/products/storage": [
     {
@@ -196,15 +196,15 @@ export const enSidebar = sidebar({
       text: "Managing Object",
       link: "/products/storage/object",
     },
-    {
-      text: "References",
-      children: [
-        {
-          text: "Storage API",
-          link: "/api/api-reference.html#tag/storage",
-        },
-      ],
-    },
+    // {
+    //   text: "References",
+    //   children: [
+    //     {
+    //       text: "Storage API",
+    //       link: "/api/api-reference.html#tag/storage",
+    //     },
+    //   ],
+    // },
   ],
   "/": [
     {
@@ -221,7 +221,7 @@ export const enSidebar = sidebar({
       ],
     },
     {
-      text: "Products",
+      text: "Concepts",
       children: [
         {
           text: "Zilla",
@@ -261,15 +261,15 @@ export const enSidebar = sidebar({
       ],
     },
     {
-      text: "Sample Application",
+      text: "Examples",
       children: [
         {
           text: "Petstore",
-          link: "/sample-app/petstore",
+          link: "/examples/petstore",
         },
         {
           text: "StreamPay",
-          link: "/sample-app/streampay",
+          link: "/examples/streampay",
         },
       ],
     },

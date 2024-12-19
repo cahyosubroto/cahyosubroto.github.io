@@ -1,3 +1,7 @@
+---
+breadcrumb: false
+---
+
 # Defining View
 
 Zillabase facilitates database migrations through an intuitive set of CLI commands. These migrations allow users to define or modify views within the database schema. By generating an empty migration file with Zillabase CLI, users can write PostgreSQL-compatible syntax to specify definitions of their views. RisingWave non-materialized views behave the same as regular relational database views, with data source support from sources, tables, views, or indexes.

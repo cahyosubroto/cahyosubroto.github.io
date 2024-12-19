@@ -1,3 +1,7 @@
+---
+breadcrumb: false
+---
+
 # External UDF in Java
 
 To declare the function in Java, we'll use the `risingwave-udf` package. Your function will need to implement an interface to expose it as UDF. You can also add additional packages to the Maven project. After that, you need to declare the function in a migration file.

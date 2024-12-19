@@ -1,3 +1,7 @@
+---
+breadcrumb: false
+---
+
 # External UDF in Python
 
 To declare the function in Python, we'll use the [`arrow-udf`](https://pypi.org/project/arrow-udf/) package. You'll need to annotate the function that you want to expose, and then define the input and return types. On the other hand, you can also provide `requirements.txt` file in the `zillabase/functions/python` path in case you want to install additional Python packages. After that, you need to declare the function in a migration file.
