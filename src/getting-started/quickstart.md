@@ -34,7 +34,7 @@ You can initialize a Zillabase project either from a new  project’s directory
 zillabase init
 ```
 
-The command will initialize a new Zillabase folder with a config.yaml and seed.sql file. The config.yaml can be used to modify the Zillabase startup configuration, including authentication, environment variables, etc.
+The command will initialize a new Zillabase folder with a `config.yaml` and `seed.sql` file. The config.yaml can be used to modify the Zillabase startup configuration, including authentication, environment variables, etc.
 
 ::: info
 The _seed.sql_ file is executed during the initialization of the project.
@@ -42,7 +42,7 @@ The _seed.sql_ file is executed during the initialization of the project.
 
 ### Step 2: Defining Data Models and Streams
 
-The next step is to define a data model with database migrations. Database migration is used to apply changes to the database schema, including tables, views, streams, etc. Zillabase supports the following features for database migration:
+A data model can be defined through database migrations. Database migration is used to apply changes to the database schema, including tables, views, streams, etc. Zillabase supports the following features for database migration:
 
 - The Zillabase CLI migration command helps users create an empty migration file that can later be modified to define data models and streams.
 - The migration file format is in SQL format, which is compatible with PostgreSQL syntax.
@@ -82,7 +82,7 @@ CREATE STREAM user_activities (
 
 ### Step 3: Defining Business Logic via Python or Java Functions (OPTIONAL)
 
-In additional files, you can declare or define a user-defined function in SQL-like syntax. Currently, we only support additional files written in Python and Java.
+An user-defined function can be declared or defined in SQL-like syntax. Currently, we only support additional files written in Python and Java.
 
 ::: info
 You can also use and start Zillabase without defining any additional Python or Java functions.
@@ -132,7 +132,7 @@ LANGUAGE python AS calculate_score;
 
 ### Step 4: Calling the Function (OPTIONAL)
 
-We'll call the function inside a materialized view aggregating each user's activity scores. You can call the function just like you'd call a function in SQL.
+We'll call a function inside a materialized view aggregating each user's activity scores. You can call the function just like you'd call a function in SQL.
 
 ```sh
 zillabase migration add activity_scores

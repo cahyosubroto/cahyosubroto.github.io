@@ -122,13 +122,13 @@ h6 {
   .vp-sidebar-links {
     margin-left: 0rem;
     .vp-sidebar-group > .vp-sidebar-header {
-      padding: 0.25rem 0rem;
+      padding: 0.25rem 0.5rem;
       margin-left: 0rem;
-      font-weight: 600;
+      // font-weight: 600;
     }
-    .vp-sidebar-title {
-      font-weight: 500;
-    }
+    // .vp-sidebar-title {
+    //   font-weight: 500;
+    // }
     .vp-sidebar-links {
       .vp-sidebar-link {
         padding-right: 0rem !important;
@@ -261,41 +261,41 @@ sup {
   display: none !important;
 }
 
-.vp-navbar:not(.auto-hide) {
-  flex-wrap: wrap;
-  height: unset !important;
-}
+// .vp-navbar:not(.auto-hide) {
+//   flex-wrap: wrap;
+//   height: unset !important;
+// }
 
-.vp-navbar:not(.auto-hide) .vp-navbar-start,
-.vp-navbar:not(.auto-hide) .vp-navbar-center,
-.vp-navbar:not(.auto-hide) .vp-navbar-end {
-  flex: 0 0 50%;
-  box-sizing: border-box;
-}
+// .vp-navbar:not(.auto-hide) .vp-navbar-start,
+// .vp-navbar:not(.auto-hide) .vp-navbar-center,
+// .vp-navbar:not(.auto-hide) .vp-navbar-end {
+//   flex: 0 0 50%;
+//   box-sizing: border-box;
+// }
 
-.vp-navbar:not(.auto-hide) .vp-navbar-center {
-  display: flex;
-  justify-content: end;
-}
+// .vp-navbar:not(.auto-hide) .vp-navbar-center {
+//   display: flex;
+//   justify-content: end;
+// }
 
-.vp-navbar-center div {
-  width: unset !important;
-}
+// .vp-navbar-center div {
+//   width: unset !important;
+// }
 
-.vp-navbar:not(.auto-hide) .vp-navbar-end {
-  padding-top: 0.5rem;
-  justify-content: start !important;
-}
+// .vp-navbar:not(.auto-hide) .vp-navbar-end {
+//   padding-top: 0.5rem;
+//   justify-content: start !important;
+// }
 
-@media (min-width: 719px) {
-  .vp-sidebar {
-    padding-top: 2rem;
-  }
+// @media (min-width: 719px) {
+//   .vp-sidebar {
+//     padding-top: 2rem;
+//   }
 
-  #main-content {
-    padding-top: 6.5rem;
-  }
-}
+//   #main-content {
+//     padding-top: 6.5rem;
+//   }
+// }
 
 .vp-navbar {
   padding-left: max(calc(var(--sidebar-space) - var(--sidebar-width)), 0.5rem);
@@ -347,10 +347,6 @@ sup {
 
 .vp-sidebar-group:not(.vp-sidebar-group .vp-sidebar-group) {
   margin-left: 0.5rem;
-}
-
-.vp-sidebar-title {
-  margin-left: 0.25rem;
 }
 
 #main-content:has(.scalar-app) .theme-hope-content {

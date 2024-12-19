@@ -1,6 +1,3 @@
-<!--StartFragment-->
-
-
 # asyncapi
 
 This command lists all the available sub-commands for Zillabase’s asyncapi feature.

@@ -4,7 +4,7 @@ breadcrumb: false
 
 # Generated AsyncAPI Specifications
 
-After defining data models and streams, Zillabase provides a generated HTTP AsyncAPI and Kafka AsyncAPI for accessing the Zillabase endpoints. This specification is different from the OpenAPI specification.
+Zillabase provides a generated HTTP AsyncAPI and Kafka AsyncAPI for accessing the Zillabase endpoints. This specification is different from the OpenAPI specification.
 
 ::: info
 Read [this article](https://www.asyncapi.com/docs/concepts) to learn more about AsyncAPI.

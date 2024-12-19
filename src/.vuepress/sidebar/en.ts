@@ -1,77 +1,77 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export const enSidebar = sidebar({
-  "/cli/": [
-    {
-      text: "Overview",
-      link: "/cli/overview",
-    },
-    {
-      text: "Help",
-      link: "/cli/help",
-    },
-    {
-      text: "Init",
-      link: "/cli/init",
-    },
-    {
-      text: "Start",
-      link: "/cli/start",
-    },
-    {
-      text: "Stop",
-      link: "/cli/stop",
-    },
-    {
-      text: "AsyncAPI",
-      link: "/cli/asyncapi",
-    },
-    {
-      text: "Config",
-      link: "/cli/config",
-    },
-    {
-      text: "Migration",
-      link: "/cli/migration",
-    },
-    {
-      text: "SSO",
-      link: "/cli/sso",
-    },
-  ],
-  "/products/zilla": [
-    {
-      text: "Zilla",
-      link: "/",
-      icon: "fa-solid fa-chevron-left",
-      children: [],
-    },
-    {
-      text: "Generated AsyncAPI Specs",
-      link: "/products/zilla/generated-asyncapi-specs",
-    },
-    {
-      text: "Endpoint Calls Example",
-      link: "/products/zilla/endpoint-calls",
-    },
-    {
-      text: "Zilla Service Configurations",
-      link: "/products/zilla/manage-configurations",
-    },
-    // {
-    //   text: "References",
-    //   children: [
-    //     {
-    //       text: "AsyncAPI API",
-    //       link: "/api/api-reference.html#tag/asyncapis",
-    //     },
-    //     {
-    //       text: "Config API",
-    //       link: "/api/api-reference.html#tag/config",
-    //     },
-    //   ],
-    // },
-  ],
+  // "/cli/": [
+  //   {
+  //     text: "Overview",
+  //     link: "/cli/overview",
+  //   },
+  //   {
+  //     text: "Help",
+  //     link: "/cli/help",
+  //   },
+  //   {
+  //     text: "Init",
+  //     link: "/cli/init",
+  //   },
+  //   {
+  //     text: "Start",
+  //     link: "/cli/start",
+  //   },
+  //   {
+  //     text: "Stop",
+  //     link: "/cli/stop",
+  //   },
+  //   {
+  //     text: "AsyncAPI",
+  //     link: "/cli/asyncapi",
+  //   },
+  //   {
+  //     text: "Config",
+  //     link: "/cli/config",
+  //   },
+  //   {
+  //     text: "Migration",
+  //     link: "/cli/migration",
+  //   },
+  //   {
+  //     text: "SSO",
+  //     link: "/cli/sso",
+  //   },
+  // ],
+  // "/products/zilla": [
+  //   {
+  //     text: "Zilla",
+  //     link: "/",
+  //     icon: "fa-solid fa-chevron-left",
+  //     children: [],
+  //   },
+  //   {
+  //     text: "Generated AsyncAPI Specs",
+  //     link: "/products/zilla/generated-asyncapi-specs",
+  //   },
+  //   {
+  //     text: "Endpoint Calls Example",
+  //     link: "/products/zilla/endpoint-calls",
+  //   },
+  //   {
+  //     text: "Zilla Service Configurations",
+  //     link: "/products/zilla/manage-configurations",
+  //   },
+  //   // {
+  //   //   text: "References",
+  //   //   children: [
+  //   //     {
+  //   //       text: "AsyncAPI API",
+  //   //       link: "/api/api-reference.html#tag/asyncapis",
+  //   //     },
+  //   //     {
+  //   //       text: "Config API",
+  //   //       link: "/api/api-reference.html#tag/config",
+  //   //     },
+  //   //   ],
+  //   // },
+  // ],
   "/products/table": [
     {
       text: "Table",
@@ -223,11 +223,11 @@ export const enSidebar = sidebar({
     {
       text: "Concepts",
       children: [
-        {
-          text: "Zilla",
-          link: "/products/zilla/generated-asyncapi-specs",
-          icon: "/assets/icons/zilla.svg",
-        },
+        // {
+        //   text: "AsyncAPI",
+        //   link: "/products/zilla/generated-asyncapi-specs",
+        //   icon: "/assets/icons/zilla.svg",
+        // },
         {
           text: "Table",
           link: "/products/table/defining-table",
@@ -270,6 +270,53 @@ export const enSidebar = sidebar({
         {
           text: "StreamPay",
           link: "/examples/streampay",
+        },
+      ],
+    },
+    {
+      text: "CLI",
+      children: [
+        {
+          text: "Overview",
+          link: "/cli/overview",
+        },
+        {
+          text: "Commands",
+          children: [
+            {
+              text: "Help",
+              link: "/cli/help",
+            },
+            {
+              text: "Init",
+              link: "/cli/init",
+            },
+            {
+              text: "Start",
+              link: "/cli/start",
+            },
+            {
+              text: "Stop",
+              link: "/cli/stop",
+            },
+            {
+              text: "AsyncAPI",
+              link: "/cli/asyncapi",
+            },
+            {
+              text: "Config",
+              link: "/cli/config",
+            },
+            {
+              text: "Migration",
+              link: "/cli/migration",
+            },
+            {
+              text: "SSO",
+              link: "/cli/sso",
+            },
+          ],
+          collapsible: true
         },
       ],
     },
