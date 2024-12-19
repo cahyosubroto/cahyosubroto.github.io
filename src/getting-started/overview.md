@@ -23,11 +23,11 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
 ## Concepts
 
 <div class="cards">
-  <VPCard
+  <!-- <VPCard
     title="Zilla"
     logo="/assets/icons/zilla_solid.svg"
     link="/products/zilla/generated-asyncapi-specs"
-  />
+  /> -->
 
   <VPCard
     title="Table"
