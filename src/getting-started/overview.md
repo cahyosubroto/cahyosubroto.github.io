@@ -59,11 +59,11 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
     link="/products/authentication/concepts"
   />
 
-  <!-- <VPCard
+  <VPCard
     title="Storage"
     logo="/assets/icons/storage_solid.svg"
     link="/products/storage/concepts"
-  /> -->
+  />
 
 </div>
 
@@ -81,6 +81,17 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
     logo="/assets/icons/streampay.svg"
     link="/sample-app/streampay"
   />
+</div>
+
+## CLI
+
+<div class="cards">
+  <VPCard
+    title="Overview"
+    logo="/assets/icons/cli_solid.svg"
+    link="/cli/overview"
+  />
+
 </div>
 
 ## Support

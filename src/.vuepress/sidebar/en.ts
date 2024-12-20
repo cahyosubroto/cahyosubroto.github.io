@@ -253,11 +253,11 @@ export const enSidebar = sidebar({
           link: "/products/authentication/concepts",
           icon: "/assets/icons/auth.svg",
         },
-        // {
-        //   text: "Storage",
-        //   link: "/products/storage/concepts",
-        //   icon: "/assets/icons/storage.svg",
-        // },
+        {
+          text: "Storage",
+          link: "/products/storage/concepts",
+          icon: "/assets/icons/storage.svg",
+        },
       ],
     },
     {
