@@ -371,3 +371,17 @@ sup {
 .hint-container.details summary {
   font-weight: 600;
 }
+
+@media (min-width: 960px) {
+  .search-pro-button {
+    width: 100%;
+  }
+}
+
+.search-pro-placeholder {
+  text-align: left;
+}
+
+.search-pro-key-hints {
+  text-align: right;
+}

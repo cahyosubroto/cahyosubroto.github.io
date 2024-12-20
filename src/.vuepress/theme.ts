@@ -51,7 +51,7 @@ export default hopeTheme({
   plugins: {
     components: {
       components: [
-        "ArtPlayer",
+        // "ArtPlayer",
         "Badge",
         "BiliBili",
         "CodePen",

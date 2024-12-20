@@ -16,4 +16,5 @@ export const enNavbar = navbar([
   //   link: "api/api-reference",
   //   activeMatch: "^\/api\/.*"
   // },
+  { text: "aklivity", icon: "fas fa-globe", link: "https://www.aklivity.io/" },
 ]);
