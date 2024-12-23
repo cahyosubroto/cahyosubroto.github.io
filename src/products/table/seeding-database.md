@@ -1,6 +1,4 @@
----
-breadcrumb: false
----
+
 
 # Initializing Database with Seeder
 

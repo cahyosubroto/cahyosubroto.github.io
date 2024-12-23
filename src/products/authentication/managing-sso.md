@@ -1,6 +1,4 @@
----
-breadcrumb: false
----
+
 
 # Managing Single Sign On (SSO)
 

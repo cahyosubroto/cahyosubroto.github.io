@@ -1,6 +1,4 @@
----
-breadcrumb: false
----
+
 
 # Defining View
 

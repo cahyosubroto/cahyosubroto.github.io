@@ -1,7 +1,3 @@
----
-breadcrumb: false
----
-
 # Zilla Service Configuration
 
 Zillabase provides commands to manage the Zilla service configurations. These commands allow users to update the available config, upload the required artifacts (like certificates), and review the running configuration. When a configuration change occurs, the Zilla service can detect and redeploy the updated configuration.

@@ -12,6 +12,7 @@ export default hopeTheme({
   logo: "/logo.webp",
   logoDark: "/logo-dark.webp",
   favicon: "/favicon.ico",
+  breadcrumb: false,
 
   repo: "aklivity/zillabase",
   editLink: false,
