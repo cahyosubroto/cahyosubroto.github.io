@@ -108,10 +108,6 @@ export const enSidebar = sidebar({
               text: "Obtaining Authenticated User",
               link: "/products/authentication/obtain-user",
             },
-            {
-              text: "Managing Single Sign On (SSO)",
-              link: "/products/authentication/managing-sso",
-            },
           ],
         },
         {
@@ -194,6 +190,15 @@ export const enSidebar = sidebar({
           collapsible: true,
         },
       ],
+    },
+    {
+      text: "SSO",
+      children: [
+        {
+          text: "Managing Single Sign-On (SSO)",
+          link: "/sso/managing-sso",
+        }
+      ]
     },
     {
       text: "Support",

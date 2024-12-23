@@ -1,6 +1,4 @@
-
-
-# Managing Single Sign On (SSO)
+# Managing Single Sign-On (SSO)
 
 You can provide additional single sign-on options for Keycloak service through the Zillabase CLI. In general, you'll need to provide the following information to add an SSO provider.
 

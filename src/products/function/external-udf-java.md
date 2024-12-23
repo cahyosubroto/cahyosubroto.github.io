@@ -1,11 +1,9 @@
-
-
 # External UDF in Java
 
-To declare the function in Java, we'll use the `risingwave-udf` package. Your function will need to implement an interface to expose it as UDF. You can also add additional packages to the Maven project. After that, you need to declare the function in a migration file.
+We'll use the `risingwave-udf` package to declare the function in Java. Your function will need to implement an interface to expose it as UDF. You can also add additional packages to the Maven project. After that, you need to declare the function in a migration file.
 
 ::: info
-Any external UDFs written in Java must be in a Maven project form and stored in `zillabase/functions/java` directory in order to be auto-picked by the Java UDF server.
+Any external UDFs written in Java must be in a Maven project form and stored in `zillabase/functions/java` directory to be auto-picked by the Java UDF server.
 :::
 
 ## Adding Environment Variables
@@ -51,89 +49,23 @@ mkdir -p zillabase/functions/java
 cd zillabase/functions/java
 ```
 
-4. Fill in the `pom.xml` file with the following contents.
+4. Create a new Maven project and add the following dependency:
 
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-
-  <groupId>io.aklivity.zillabase</groupId>
-  <artifactId>risingwave-udf-example</artifactId>
-  <version>0.1.0-SNAPSHOT</version>
-
-  <name>udf-example</name>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>11</maven.compiler.source>
-    <maven.compiler.target>11</maven.compiler.target>
-  </properties>
-
-  <dependencies>
-    <!-- https://mvnrepository.com/artifact/com.risingwave/risingwave-udf -->
-    <dependency>
-      <groupId>com.risingwave</groupId>
-      <artifactId>risingwave-udf</artifactId>
-      <version>0.2.1</version>
-    </dependency>
-  </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>3.0.0</version>
-        <configuration>
-          <argLine>--add-opens=java.base/java.nio=ALL-UNNAMED</argLine>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <version>3.4.2</version>
-        <configuration>
-          <archive>
-            <manifest>
-              <mainClass>io.aklivity.zillabase.UdfExample</mainClass>
-            </manifest>
-          </archive>
-          <descriptorRefs>
-            <descriptorRef>jar-with-dependencies</descriptorRef>
-          </descriptorRefs>
-          <finalName>risingwave-udf-example</finalName>
-          <appendAssemblyId>false</appendAssemblyId>
-        </configuration>
-        <executions>
-          <execution>
-            <id>udf-example</id>
-            <phase>package</phase>
-            <goals>
-              <goal>single</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-    </plugins>
-  </build>
-</project>
+<dependency>
+  <groupId>com.risingwave</groupId>
+  <artifactId>risingwave-udf</artifactId>
+  <version>0.2.1</version>
+</dependency>
 ```
 
-5. Create `src/main/java/io/aklivity/zillabase` folder.
+::: info
+Make sure to include the class's main entry point on the Maven project.
+:::
 
-```sh
-mkdir -p src/main/java/io/aklivity/zillabase
-```
-
-6. Create `UdfExample.java` in the `src/main/java/io/aklivity/zillabase` path with the following contents.
+5. Create `UdfExample.java` on the main namespace (for example `src/main/java/io/aklivity/zillabase`) or modify the project main entry point with the following contents:
 
 ```java
-package io.aklivity.zillabase;
-
 import java.util.Iterator;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -195,13 +127,13 @@ public class UdfExample
 }
 ```
 
-7. Create a new migration file.
+6. Create a new migration file.
 
 ```sh
 zillabase migration add create_function
 ```
 
-8. Declare the function in the migration file.
+7. Declare the function in the migration file.
 
 ```sql
 CREATE FUNCTION gcd(int, int) RETURNS int LANGUAGE java AS gcd;
@@ -211,13 +143,13 @@ CREATE FUNCTION array_access(varchar[], int) RETURNS varchar LANGUAGE java AS ar
 CREATE FUNCTION series(int) RETURNS TABLE (x int) LANGUAGE java AS series;
 ```
 
-9. Run the project.
+8. Run the project.
 
 ```sh
 zillabase start
 ```
 
-10. Connect to the database with PSQL.
+9. Connect to the database with PSQL.
 
 ```sh
 psql -U root -d dev -h localhost -p 4567
@@ -240,7 +172,7 @@ brew install libpq
 
 :::
 
-11. Run a query.
+10. Run a query.
 
 ```sql
 select gcd(12, 4);
@@ -250,7 +182,7 @@ select array_access('{"first", "second", "third"}', 2);
 select series(5);
 ```
 
-12. Stop the project.
+11. Stop the project.
 
 ```sh
 zillabase stop
