@@ -9,8 +9,8 @@ export default hopeTheme({
   iconAssets: ["fontawesome-with-brands"],
 
   // logo: "/logo.png",
-  logo: "/logo.webp",
-  logoDark: "/logo-dark.webp",
+  logo: "/logo-light.png",
+  logoDark: "/logo-dark.png",
   favicon: "/favicon.ico",
   breadcrumb: false,
 
