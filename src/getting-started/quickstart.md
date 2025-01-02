@@ -1,253 +1,126 @@
-
 # Quickstart
 
-Learn how to integrate Zillabase with your project quickly using Zillabase CLI.
+This guide provides a step-by-step approach to getting started with Zillabase. It automatically generates both HTTP AsyncAPI 3.x and Kafka AsyncAPI 3.x specifications based on Kafka Cluster metadata.
 
 ## Prerequisites
 
-- Java 20+
-- Homebrew package manager
-- Docker
+Ensure you have the following tools installed on your system:
 
-## Install Zillabase CLI
+- **Homebrew**
+- **curl**
+- **Docker**
+- **Java 20 or later**
 
-Zillabase CLI is a CLI application that helps you generate and manage Zillabase configuration for your application. To install the CLI, run the following command:
 
-```sh
-# add aklivity/tap to the brew source repository
+## Step 1: Install Zillabase
+
+To install Zillabase, use the following commands:
+
+```bash
 brew tap aklivity/tap
 
-# install zillabase
 brew install zillabase
-
-# test the installation
-zillabase 
 ```
 
-## Integrate your Project with Zillabase
+## Step 2: Clone the Example Repository
+To quickly start using Zillabase stack, you can use our quickstart example repo. 
+1. Clone the repo using the following command:
 
-### Step 1: Initializing a Zillabase Project
-
-You can initialize a Zillabase project either from a new  project’s directory or an existing  project’s directory with the following command:
-
-```sh
-zillabase init
+```bash
+git clone https://github.com/aklivity/zillabase.git
 ```
+2. Navigate to the **examples** > **quickstart** > **zillabase** folder.
 
-The command will initialize a new Zillabase folder with a `config.yaml` and `seed.sql` file. The config.yaml can be used to modify the Zillabase startup configuration, including authentication, environment variables, etc.
+## Step 3: Start Zillabase
 
-::: info
-The _seed.sql_ file is executed during the initialization of the project.
-:::
+Start the Zillabase using the following command:
 
-### Step 2: Defining Data Models and Streams
-
-A data model can be defined through database migrations. Database migration is used to apply changes to the database schema, including tables, views, streams, etc. Zillabase supports the following features for database migration:
-
-- The Zillabase CLI migration command helps users create an empty migration file that can later be modified to define data models and streams.
-- The migration file format is in SQL format, which is compatible with PostgreSQL syntax.
-
-::: info
-Refer to [this article](https://docs.risingwave.com/sql/overview) for a complete SQL and supported reference.
-:::
-
-1. Define a table with an SQL-like syntax.
-
-```sh
-zillabase migration add create_tables
-
-# output
-# Created migration 000000__create_tables.sql
-```
-
-2. Open the generated SQL file and fill it with the following table definition.
-
-```sql
-CREATE TABLE users(
-  id varchar,
-  username varchar,
-  name varchar,
-  PRIMARY KEY (id)
-);
-```
-
-3. Create a new stream to track all of the user commands for the application.
-
-```sql
-CREATE STREAM user_activities (
-  activity_name varchar,
-  user_id varchar
-);
-```
-
-### Step 3: Defining Business Logic via Python or Java Functions (OPTIONAL)
-
-An user-defined function can be declared or defined in SQL-like syntax. Currently, we only support additional files written in Python and Java.
-
-::: info
-You can also use and start Zillabase without defining any additional Python or Java functions.
-:::
-
-1. Create a Python file in `zillabase/functions/python/calculate_score.py` with the following content.
-
-```python
-from arrow_udf import udf  # for registering User Defined Functions
-import random
-
-
-@udf(
-    input_types=["VARCHAR"],
-    result_type="INT",
-)
-def calculate_score(activity: str):
-    if activity.lower() == "good":
-        return 10
-    elif activity.lower() == "bad":
-        return -10
-    elif activity.lower() == "neutral":
-        return 2
-
-    return random.randint(-5, 5)
-```
-
-::: info
-Any external UDFs written in Python must be stored in `zillabase/functions/python` directory in order to be auto-picked by the Python UDF server.
-:::
-
-2. Next, we'll have to define the function in our migration files.
-
-```sh
-zillabase migration add define_function
-
-# output
-# Created migration 000001__define_function.sql
-```
-
-```sql
--- declare the user-defined function
-
-CREATE FUNCTION calculate_score(varchar) RETURNS int
-LANGUAGE python AS calculate_score;
-```
-
-### Step 4: Calling the Function (OPTIONAL)
-
-We'll call a function inside a materialized view aggregating each user's activity scores. You can call the function just like you'd call a function in SQL.
-
-```sh
-zillabase migration add activity_scores
-
-# output
-# Created migration 000002__activity_scores.sql
-```
-
-```sql
-CREATE MATERIALIZED VIEW activity_scores AS
-    WITH activities AS (
-        SELECT user_id, calculate_score(activity_name)::int AS score
-        FROM user_activities
-    ),
-    score AS (
-        SELECT user_id, SUM(score) as score
-        FROM activities
-        GROUP BY user_id
-    )
-    SELECT id, name, score
-    FROM score
-    INNER JOIN users ON users.id = score.user_id;
-```
-
-When a new stream message arrives, the `activity_scores` materialized view will be recomputed to keep the data fresh.
-
-### Step 5: Setting Up Authentication (OPTIONAL)
-
-You can define a data seed from the `seed.sql` file.
-
-1. Edit the config.yaml to add a predefined Keycloak users.
-
-```yaml
-# config
-keycloak:
-  realm: zillabase
-  users:
-    - username: admin
-      email: johndoe@example.com
-      name: John Doe
-      password: password
-  client:
-    client-id: activity
-    redirects:
-      - http://localhost:8084/*
-```
-
-### Step 6: Pre-Populate Data During Startup (OPTIONAL)
-
-You can pre-populate data during startup by modifying the `seed.sql` file. This file will be run after the database migration is completed. In this example, modify the `seed.sql` file with the following content:
-
-```sql
-INSERT INTO users (id, name) VALUES ('allen', 'allen');
-INSERT INTO users (id, name) VALUES ('bertollo', 'bertollo');
-```
-
-### Step 7: Start Zillabase
-
-1. Start Zillabase with the following command and wait for the initialization to finish.
-
-```sh
+```bash
 zillabase start
-
-# output
-# latest: Pulling from aklivity/zillabase
-# …
-# seed.sql processed successfully!
-# ...
-# Realm: zillabase created successfully.
-# ...
-# Config Server is populated with zilla.yaml
 ```
 
-2. Zillabase leverages the AsyncAPI schema definition to define the generated streaming APIs. You can create an asyncapi.yaml schema file by running the following command.
+### Example Output:
 
-```sh
-zillabase asyncapi show http-asyncapi >> asyncapi_REST_APIs.yaml
+```text
+3.2.3: Pulling from bitnami/kafka
+latest: Pulling from risingwavelabs/risingwave
+latest-release: Pulling from apicurio/apicurio-registry-mem
+latest: Pulling from bitnami/keycloak
+seed-kafka.yaml processed successfully!
+Registered AsyncAPI spec: kafka-asyncapi
+Registered AsyncAPI spec: http-asyncapi
+Config Server is populated with zilla.yaml
 ```
 
-3. Once you have started Zillabase and generated your AsyncAPI schema, you can copy it into the [AsyncAPI Studio](https://studio.asyncapi.com/) to see a full list of all the streaming APIs you have created.
+## Step 4: Use Generated API Endpoints
+
+Zillabase acts as an HTTP Kafka proxy, exposing CRUD endpoints for entities. Entity data is stored in Kafka topics, utilizing Kafka's `cleanup.policy=compact` feature.
+
+### Available Endpoints
+
+| Protocol | Method | Endpoint     | Topic  | Description                     |
+|----------|--------|--------------|--------|---------------------------------|
+| HTTP     | POST   | /events      | events | Create an event.                |
+| HTTP     | PUT    | /events/\{id} | events | Update an event by the key.     |
+| HTTP     | DELETE | /events/\{id} | events | Delete an event by the key.     |
+| HTTP     | GET    | /events      | events | Fetch all events.               |
+| HTTP     | GET    | /events/\{id} | events | Fetch an event by the key.      |
 
 
-### Step 8: Testing the Endpoints
+### Examples
 
-1. Authenticate through Keycloak to get the access token.
+#### 1. Publish a Record
 
-```sh
-curl -X POST 'http://localhost:8180/realms/zillabase/protocol/openid-connect/token' \
--H 'Content-Type: application/x-www-form-urlencoded' \
---data-urlencode 'client_id=activity' \
---data-urlencode 'grant_type=password' \
---data-urlencode 'username=admin \
---data-urlencode 'password=password'
+To publish a valid record to the `events` topic, use the following command:
+
+```bash
+curl -k -v -X POST http://localhost:8080/events \
+  -H 'Idempotency-Key: 1' \
+  -H 'Content-Type: application/json' \
+  -d '{"id": "101", "message": "Hello, World"}'
 ```
 
-2. Insert some activity.
+#### Example Output:
 
-```sh
-curl -X POST 'http://localhost:8080/user_activities' \
--H 'Content-Type: application/json' -H ‘Authorization: Bearer access_token’ \
---data ‘{"activity_name": "good", "user_id": "allen"}’
+```text
+> POST /events HTTP/1.1
+...
+> Content-Type: application/json
+>
+< HTTP/1.1 204 No Content
+< Access-Control-Allow-Origin: *
+<
+* Connection #0 to host localhost left intact
 ```
 
-3. Show the activity scores.
+#### 2. Fetch a Record
 
-```sh
-curl -X GET 'http://localhost:8080/activity_scores' \
- -H ‘Authorization: Bearer access_token’
+To fetch a record by its key:
+
+```bash
+curl -k -v http://localhost:8080/events/1
 ```
 
+#### Example Output:
 
-### Step 9: Stop Zillabase
+```text
+> GET /events/1 HTTP/1.1
+...
+< HTTP/1.1 200 OK
+< Content-Length: 33
+< Content-Type: application/json
+< Etag: AQIAAg==
+< Access-Control-Allow-Origin: *
+< Access-Control-Expose-Headers: *
+<
+* Connection #0 to host localhost left intact
+{"id": "101", "message": "Hello, World"}%
+```
 
-You can stop Zillabase with the following command:
+## Step 5: Stop Zillabase
 
-```sh
+To stop the Zillabase, use the following command:
+
+```bash
 zillabase stop
 ```
