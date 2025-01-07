@@ -1,7 +1,7 @@
 import { hopeTheme } from "vuepress-theme-hope";
 import { enNavbar } from "./navbar/index.js";
 import { enSidebar } from "./sidebar/index.js";
-import { hostnameSEO, docsRepo } from "./env.js";
+import { hostnameSEO, docsRepo, docsBranch, base, versionKey, siteBase } from "./env.js";
 
 export default hopeTheme({
   hostname: hostnameSEO,
@@ -19,6 +19,7 @@ export default hopeTheme({
   contributors: false,
   lastUpdated: false,
   docsRepo,
+  docsBranch,
 
   docsDir: "src",
   pure: true,
@@ -38,8 +39,9 @@ export default hopeTheme({
 
       // sidebar
       sidebar: enSidebar,
+      headerDepth: 3,
       footer: `<span style="display:flex;align-items:center"><a href="https://www.aklivity.io"><img class="logo" alt="aklivity"></a> <a href="https://github.com/aklivity/zillabase"><i class="fa-brands fa-github" style="font-size:22px;padding-right:6px"></i></a> <a href="https://www.linkedin.com/company/aklivity/"><i class="fa-brands fa-linkedin" style="font-size:22px;padding-right:6px"></i></a> <a href="https://www.aklivity.io/slack"><i class="fa-brands fa-slack" style="font-size:25px;padding-right:6px"></i></a> <a href="https://www.twitter.com/aklivityinc"><i class="fa-brands fa-twitter" style="font-size:22px"></i></a></span>`,
-      copyright: "© aklivity, inc. 2023-2024",
+      copyright: "© aklivity, inc. 2023-2025",
 
       metaLocales: {
         editLink: "Edit this page on GitHub",
@@ -83,8 +85,10 @@ export default hopeTheme({
     //   type: "mathjax",
     // },
 
-    // This features is enabled for demo, only preserve if you need it
-    markdownTab: false,
+    markdownTab: {
+      codeTabs: true,
+      tabs: true,
+    },
 
     // These features are enabled for demo, only preserve features you need here
     mdEnhance: {
@@ -140,6 +144,11 @@ export default hopeTheme({
 
       // Install sandpack-vue3 before enabling it
       // sandpack: true,
+    },
+
+    markdownHint: {
+      hint: true,
+      alert: true,
     },
 
     // Install @vuepress/plugin-pwa and uncomment these if you want a PWA
@@ -198,12 +207,31 @@ export default hopeTheme({
     //     ],
     //   },
     // },
+    shiki: {
+      themes: {
+        light: "light-plus",
+        dark: "dark-plus",
+      },
+      lineNumbers: 3
+    },
 
     searchPro: true,
+    // todo command searchPro: true and enable this if using docsearch
+    // docsearch: {
+    //   disableUserPersonalization: true,
+    //   appId: "H6RNUBSB6E",
+    //   indexName: "aklivity",
+    //   apiKey: "aaad765b377ba149769753806b181909",
+    //   indexBase: `/${base}/`,
+    //   searchParameters: {
+    //     facetFilters: [`version:${versionKey}`, `product:${siteBase}`],
+    //   },
+    // },
 
     // install @vuepress/plugin-revealjs and uncomment these if you need slides
     // revealjs: {
     //   plugins: ["highlight", "math", "search", "notes", "zoom"],
     // },
+    
   },
 });
