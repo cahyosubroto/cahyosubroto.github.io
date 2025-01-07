@@ -1,5 +1,4 @@
 
-
 # Defining Materialized View
 
 Zillabase makes managing database migrations straightforward, including defining materialized views. The CLI allows users to generate a migration file that can be modified to include PostgreSQL-like syntax. A materialized view can consume streams, perform some transformation, and materialize it. The materialized view is always updated when new data is inserted into the stream.
@@ -31,4 +30,3 @@ CREATE MATERIALIZED VIEW IF NOT EXISTS streampay_replies AS
     UNION
     SELECT '200' AS status,  encode(zilla_correlation_id, 'escape') AS correlation_id from streampay_commands where type IN ('SendPayment', 'RequestPayment', 'RejectRequest');
 ```
-

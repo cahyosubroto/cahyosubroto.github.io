@@ -60,7 +60,7 @@ curl -N --http2 http://localhost:8080/petstore_pets-stream
 # data:{"id": "234", "breed": "Tippler"}
 ```
 
-## Consume the Kafka topic 
+## Consume the Kafka topic
 
 The command won't automatically exit as it listens to any new incoming events. Keep it open.
 
@@ -78,7 +78,6 @@ curl -X POST http://localhost:8080/petstore_pets -H "Content-Type: application/j
 
 # prints nothing
 ```
-
 
 ## Check the Stream Consumer
 

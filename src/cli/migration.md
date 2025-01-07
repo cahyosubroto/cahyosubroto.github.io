@@ -13,7 +13,6 @@ zillabase migration
 - `add` - Create a new migration file locally.
 - `list` - List all the local migration files.
 
-
 ## migration add
 
 This command creates a new database migration file locally.
@@ -24,7 +23,6 @@ This command creates a new database migration file locally.
 zillabase migration add [ --debug ] [ {-h | --help} ] [--] <name>...
 ```
 
-
 ### Options
 
 | Option       | Description                                                | Required | Default Value | Example          |
@@ -34,18 +32,15 @@ zillabase migration add [ --debug ] [ {-h | --help} ] [--] <name>...
 | `--`         | Separates command-line options from the list of arguments. | No       | -             | `-- argument`    |
 | `<name>`     | The name(s) of the migration(s) to be added.               | **Yes**  | -             | `migration_name` |
 
-
 ## migration list
 
 This command lists all the local migration files.
-
 
 ### Usage
 
 ```sh
 zillabase migration list [ --debug ] [ {-h | --help} ]
 ```
-
 
 ### Options
 

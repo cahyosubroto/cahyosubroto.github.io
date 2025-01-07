@@ -1,5 +1,4 @@
 
-
 # Defining Table
 
 Zillabase offers commands to streamline managing database migrations, which define or modify the database schema. Using the Zillabase CLI, users can generate an empty SQL-based migration file. This file can then be customized to include table definitions. Defining a table will create a Kafka topic with the same name, and RisingWave will provide an interface compatible with PostgreSQL-like syntax.

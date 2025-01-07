@@ -1,6 +1,6 @@
 # Petstore Example
 
-The Petstore example project implements the common Petstore example, where requests are proxied to Kafka. 
+The Petstore example project implements the common Petstore example, where requests are proxied to Kafka.
 
 Zilla implements the REST endpoints defined in an AsyncAPI 3.x spec and proxies them onto Kafka topics defined in an AsyncAPI 3.x spec based on the operations defined in each spec. HTTP AsyncAPI 3.x spec and Kafka AsyncAPI 3.x spec are generated automatically based on the Kafka Cluster metadata information.
 
@@ -29,6 +29,7 @@ The Homebrew package manager is required. You can install it on MacOS and other 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
 :::
 
 ## Setting Up the Project

@@ -1,5 +1,4 @@
 
-
 # Authentication Configuration
 
 There are various configurable authentication options in Zillabase.
@@ -20,7 +19,6 @@ You can set up Keycloak by providing the following configuration in `zillabase/c
 | keycloak.users            | User\[]   | No           | Users object that will be seeded during project initialization.                                |
 
 For the secret value, you can provide env instead of putting the secret directly with the following format: `${{ env.SECRET_ENV_KEY }}`.
-
 
 ## Seeding User
 

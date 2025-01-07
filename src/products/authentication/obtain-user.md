@@ -1,5 +1,4 @@
 
-
 # Obtaining Authenticated User
 
 To obtain an authenticated user on view or stream, you can use `zilla_identity` variable in the query. For example:
@@ -33,4 +32,3 @@ CREATE STREAM streampay_commands(
 ```
 
 We also provide `zilla_correlation_id` and `zilla_timestamp` in case you need it.
-

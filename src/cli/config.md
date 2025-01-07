@@ -34,11 +34,9 @@ zillabase config add {-c | --config} <config> [ --debug ] [ {-h | --help} ] [ --
 | `--id <id>`                      | Config identifier.                     | No       | -             | `--id 123`         |
 | `-v, --verbose`                  | Show verbose output.                   | No       | -             | `-v`               |
 
-
 ## config list
 
 This command lists all the available Zillabase configurations in the project.
-
 
 ### Usage
 
@@ -46,7 +44,6 @@ This command lists all the available Zillabase configurations in the project.
 zillabase config list [ --debug ] [ {-h | --help} ] --id <id> [ {-v | --verbose} ]
 ```
 
-
 ### Options
 
 | Option          | Description                            | Required | Default Value | Example    |
@@ -56,11 +53,9 @@ zillabase config list [ --debug ] [ {-h | --help} ] --id <id> [ {-v | --verbose}
 | `--id <id>`     | Config identifier.                     | **Yes**  | -             | `--id 123` |
 | `-v, --verbose` | Show verbose output.                   | No       | -             | `-v`       |
 
-
 ## config remove
 
 This command removes a Zillabase configuration from the project.
-
 
 ### Usage
 
@@ -68,7 +63,6 @@ This command removes a Zillabase configuration from the project.
 zillabase config remove [ --debug ] [ {-h | --help} ] --id <id> [ {-v | --verbose} ]
 ```
 
-
 ### Options
 
 | Option          | Description                            | Required | Default Value | Example    |
@@ -77,4 +71,3 @@ zillabase config remove [ --debug ] [ {-h | --help} ] --id <id> [ {-v | --verbos
 | `-h, --help`    | Display help information.              | No       | -             | `-h`       |
 | `--id <id>`     | Config identifier.                     | **Yes**  | -             | `--id 123` |
 | `-v, --verbose` | Show verbose output.                   | No       | -             | `-v`       |
-

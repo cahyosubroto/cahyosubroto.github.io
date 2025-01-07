@@ -11,7 +11,6 @@ Ensure you have the following tools installed on your system:
 - **Docker**
 - **Java 20 or later**
 
-
 ## Step 1: Install Zillabase
 
 To install Zillabase, use the following commands:
@@ -23,12 +22,15 @@ brew install zillabase
 ```
 
 ## Step 2: Clone the Example Repository
-To quickly start using Zillabase stack, you can use our quickstart example repo. 
+
+To quickly start using Zillabase stack, you can use our quickstart example repo.
+
 1. Clone the repo using the following command:
 
 ```bash
 git clone https://github.com/aklivity/zillabase.git
 ```
+
 2. Navigate to the **examples** > **quickstart** > **zillabase** folder.
 
 ## Step 3: Start Zillabase
@@ -39,7 +41,7 @@ Start the Zillabase using the following command:
 zillabase start
 ```
 
-### Example Output:
+### Example Output
 
 ```text
 3.2.3: Pulling from bitnami/kafka
@@ -66,7 +68,6 @@ Zillabase acts as an HTTP Kafka proxy, exposing CRUD endpoints for entities. Ent
 | HTTP     | GET    | /events      | events | Fetch all events.               |
 | HTTP     | GET    | /events/\{id} | events | Fetch an event by the key.      |
 
-
 ### Examples
 
 #### 1. Publish a Record
@@ -80,7 +81,7 @@ curl -k -v -X POST http://localhost:8080/events \
   -d '{"id": "101", "message": "Hello, World"}'
 ```
 
-#### Example Output:
+#### Example Output
 
 ```text
 > POST /events HTTP/1.1
@@ -101,7 +102,7 @@ To fetch a record by its key:
 curl -k -v http://localhost:8080/events/1
 ```
 
-#### Example Output:
+#### Example Output
 
 ```text
 > GET /events/1 HTTP/1.1

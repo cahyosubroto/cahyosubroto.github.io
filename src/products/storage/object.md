@@ -1,5 +1,4 @@
 
-
 # Managing Object
 
 A key uniquely identifies an object. If a bucket is equivalent to a folder, then an object is equivalent to a file. The following actions are supported for managing objects in Zillabase:
@@ -32,7 +31,7 @@ curl http://localhost:7184/v1/storage/objects/{bucket-name}/{file-name}
 
 ## Create an Object
 
-To create an object, call the `POST /storage/buckets/{bucket-name}/{file-name}` endpoint. If it succeeds, it will return a 204 response status code. 
+To create an object, call the `POST /storage/buckets/{bucket-name}/{file-name}` endpoint. If it succeeds, it will return a 204 response status code.
 
 ```sh
 FILE_PATH="/path/to/your/file"
@@ -48,7 +47,7 @@ Replace the `/path/to/your/file` with the actual path of the file that you want 
 
 ## Update an Object
 
-To update an object, call the `PUT /storage/buckets/{bucket-name}/{file-name}` endpoint. If it succeeds, it will return a 200 response status code. 
+To update an object, call the `PUT /storage/buckets/{bucket-name}/{file-name}` endpoint. If it succeeds, it will return a 200 response status code.
 
 ```sh
 FILE_PATH="/path/to/your/file"
@@ -60,6 +59,7 @@ curl -X PUT \
 ```
 
 ::: info
+
 - Replace the `/path/to/your/file` with the actual path of the file that you want to upload.
 - An etag header is required. This value is a unique identifier (usually a hash) for the current state or version of the object in the bucket. It is used to verify whether the object has been modified since the client last retrieved it.
 :::

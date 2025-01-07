@@ -1,5 +1,4 @@
 
-
 # Managing Bucket
 
 A bucket is an equivalent of a folder. It is a logical grouping that can hold a collection of objects. The following actions are supported for managing buckets in Zillabase:

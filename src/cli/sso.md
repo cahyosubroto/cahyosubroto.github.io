@@ -24,7 +24,6 @@ This command adds a new identity provider.
 zillabase sso add {-a | --alias} <alias> {-c | --client} <clientId> [ --debug ] [ {-h | --help} ] {-p | --provider} <providerId> {-r | --realm} <realm> {-s | --secret} <secret>  [ {-v | --verbose} ]
 ```
 
-
 ### Options
 
 | Option                                     | Description                            | Required | Default Value | Example          |
@@ -38,18 +37,15 @@ zillabase sso add {-a | --alias} <alias> {-c | --client} <clientId> [ --debug ] 
 | `-s <secret>, --secret <secret>`           | Client Secret                          | **Yes**  | -             | `-s mysecret`    |
 | `-v, --verbose`                            | Show verbose output.                   | No       | -             | `-v`             |
 
-
 ## sso list
 
 This command lists all the identity providers available for the project.
-
 
 ### Usage
 
 ```sh
 zillabase sso list [ {-a | --alias} <alias> ] [ --debug ] [ {-h | --help} ] {-r | --realm} <realm> [ {-v | --verbose} ]
 ```
-
 
 ### Options
 
@@ -60,7 +56,6 @@ zillabase sso list [ {-a | --alias} <alias> ] [ --debug ] [ {-h | --help} ] {-r 
 | `-h, --help`                  | Display help information.              | No       | -             | `-h`         |
 | `-r <realm>, --realm <realm>` | Keycloak Realm                         | **Yes**  | -             | `-r myrealm` |
 | `-v, --verbose`               | Show verbose output.                   | No       | -             | `-v`         |
-
 
 ## sso remove
 
@@ -81,4 +76,3 @@ zillabase sso remove {-a | --alias} <alias> [ --debug ]  [ {-h | --help} ] {-r |
 | `-h, --help`                  | Display help information.              | No       | -             | `-h`         |
 | `-r <realm>, --realm <realm>` | Keycloak Realm                         | **Yes**  | -             | `-r myrealm` |
 | `-v, --verbose`               | Show verbose output.                   | No       | -             | `-v`         |
-

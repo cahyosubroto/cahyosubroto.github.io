@@ -1,5 +1,4 @@
 
-
 # Defining View
 
 Zillabase facilitates database migrations through an intuitive set of CLI commands. These migrations allow users to define or modify views within the database schema. By generating an empty migration file with Zillabase CLI, users can write PostgreSQL-compatible syntax to specify definitions of their views. RisingWave non-materialized views behave the same as regular relational database views, with data source support from sources, tables, views, or indexes.
@@ -26,7 +25,6 @@ zillabase migration add create_view
 After the command succeeds, it prints the new migration file, which you can modify to define your data models. To modify the migration files, open the `zillabase/migrations` folder and edit the corresponding migration file.
 
 2. Edit the migration file with the following content.
-
 
 ```sql
 CREATE VIEW user_transactions AS

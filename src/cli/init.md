@@ -2,13 +2,11 @@
 
 This command initializes a new Zillabase folder with an empty `config.yaml` and `seed.sql` file.
 
-
 ## Usage
 
 ```sh
 zillabase init [ --debug ] [ {-h | --help} ]
 ```
-
 
 ## Options
 

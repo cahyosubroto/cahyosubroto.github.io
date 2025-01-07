@@ -2,13 +2,11 @@
 
 This command starts the Zillabase containers for the local project development.
 
-
 ## Usage
 
 ```sh
 zillabase start [ --debug ] [ {-h | --help} ]
 ```
-
 
 ## Options
 

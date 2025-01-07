@@ -1,5 +1,4 @@
 
-
 # Defining Stream
 
 Zillabase simplifies the management of database migrations for various use cases, including streams. With its CLI, users can quickly create an empty migration file, which can be customized to define streams with PostgreSQL-like syntax. This stream is specific to Zillabase and does not relate to RisingWave syntax. A stream tracks all of the application's user commands. It creates a topic and produces CRUD APIs to produce and fetch the data. The stream can be consumed by other data models, including tables, views, and materialized views.

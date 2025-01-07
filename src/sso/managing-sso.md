@@ -10,7 +10,7 @@ You can provide additional single sign-on options for Keycloak service through t
 | realm       | The Keycloak realm in which the integration will take place.      |
 | secret      | The secret key is used to authenticate with the SSO provider.     |
 
-The client and realm values are the ones that you defined before in Zillabase `config.yaml`. Here are some of the provider IDs that are supported:
+The client and realm values are the ones that you defined before in Zillabase `config.yaml`. Here are some provider IDs that are supported:
 
 | **Name**                | **Provider ID** |
 | ----------------------- | --------------- |

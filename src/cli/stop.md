@@ -2,13 +2,11 @@
 
 This command stops the Zillabase containers for the local project development.
 
-
 ## Usage
 
 ```sh
 zillabase stop [ --debug ] [ {-h | --help} ]
 ```
-
 
 ## Options
 

@@ -17,7 +17,6 @@ udf:
       - MY_VAR=value
 ```
 
-
 ## Example
 
 Before we start, make sure you have the following requirements installed:

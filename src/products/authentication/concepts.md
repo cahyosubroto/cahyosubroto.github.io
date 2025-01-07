@@ -1,5 +1,4 @@
 
-
 # Authentication in Zillabase
 
 Zillabase utilizes Keycloak to manage its user authentication. The Keycloak was configured through a `config.yaml` file and initialized during the `zillabase start` command. Follow this guide to learn how Keycloak is integrated with Zillabase and how to implement authentication in your application.

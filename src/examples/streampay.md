@@ -31,6 +31,7 @@ The Homebrew package manager is required. You can install it on MacOS and other 
 ```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
 :::
 
 ## Setting Up the Project
@@ -112,7 +113,7 @@ zillabase asyncapi show http-asyncapi >> asyncapi_REST_APIs.yaml
 
 Once the generated AsyncAPI schema is exported, you can copy it into the [AsyncAPI Studio](https://studio.asyncapi.com/) to get a complete picture of all the streaming APIs you have created.
 
-Some of the endpoints described are:
+Some endpoints described are:
 
 | Method | Endpoint                           | Topic                          | Description                                  |
 | ------ | ---------------------------------- | ------------------------------ | -------------------------------------------- |
