@@ -3,11 +3,13 @@ import { getDirname, path } from "vuepress/utils";
 import { registerComponentsPlugin } from "@vuepress/plugin-register-components";
 
 const __dirname = getDirname(import.meta.url);
+import { base, siteBase, dest, versionKey } from "./env.js";
 
 import theme from "./theme.js";
 
 export default defineUserConfig({
-  base: "/",
+  base: `/${base}/`,
+  dest,
 
   locales: {
     "/": {
