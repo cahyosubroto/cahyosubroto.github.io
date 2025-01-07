@@ -15,7 +15,7 @@ export default hopeTheme({
   breadcrumb: false,
 
   repo: "aklivity/zillabase",
-  editLink: false,
+  editLink: true,
   contributors: false,
   lastUpdated: false,
   docsRepo,
@@ -199,7 +199,7 @@ export default hopeTheme({
     //   },
     // },
 
-    searchPro: true
+    searchPro: true,
 
     // install @vuepress/plugin-revealjs and uncomment these if you need slides
     // revealjs: {
