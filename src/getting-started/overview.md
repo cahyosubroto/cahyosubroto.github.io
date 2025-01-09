@@ -94,7 +94,7 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
 
 </div>
 
-## Single Sign-On (SSO)
+<!-- ## Single Sign-On (SSO)
 
 <div class="cards">
   <VPCard
@@ -102,7 +102,7 @@ Zillabase is a modern alternative to Firebase, designed for real-time data proce
     logo="/assets/icons/sso_solid.svg"
     link="/sso/managing-sso"
   />
-</div>
+</div> -->
 
 ## Support
 

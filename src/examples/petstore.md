@@ -30,6 +30,7 @@ The Homebrew package manager is required. You can install it on MacOS and other 
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
+For more details, visit the [GitHub repository](https://github.com/aklivity/zillabase).
 :::
 
 ## Setting Up the Project

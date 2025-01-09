@@ -12,13 +12,14 @@ You can provide additional single sign-on options for Keycloak service through t
 
 The client and realm values are the ones that you defined before in Zillabase `config.yaml`. Here are some provider IDs that are supported:
 
-| **Name**                | **Provider ID** |
-| ----------------------- | --------------- |
-| Google                  | google          |
-| Facebook                | facebook        |
-| Twitter                 | twitter         |
-| Generic Open ID Connect | oidc            |
-| SAML Providers          | saml            |
+| **Name**               | **Provider ID** | **Reference**                                                                                                                  |
+| ---------------------- | --------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Google                 | google          | [Google API Client ID Guide](https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid)                    |
+| Facebook               | facebook        | [Facebook App Dashboard Settings](https://developers.facebook.com/docs/development/create-an-app/app-dashboard/basic-settings) |
+| X (Formerly Twitter)   | twitter         | [X OAuth 2.0 Integration Guide](https://developer.x.com/en/docs/authentication/oauth-2-0)                                      |
+| Github                 | github          | [Creating a GitHub OAuth App](https://docs.github.com/en/apps/oauth-apps/building-oauth-apps/creating-an-oauth-app)            |
+| Generic OpenID Connect | oidc            | [OpenID Connect Layers](https://www.keycloak.org/securing-apps/oidc-layers)                                                    |
+| SAML Providers         | saml            | [SAML Galleon Layers](https://www.keycloak.org/securing-apps/saml-galleon-layers)                                              |
 
 ::: info
 Please refer to the Keycloak or the other providers' documentation to get more complete provider IDs that are supported.
