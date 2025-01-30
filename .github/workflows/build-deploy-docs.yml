@@ -2,7 +2,7 @@ name: Site versioned build & deploy
 
 on:
   push:
-    branches: [develop, feature/workflow]
+    branches: [develop, feature/workflow, feature/restructure]
   workflow_dispatch:
 
 permissions:
