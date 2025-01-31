@@ -1,1 +1,0 @@
-import{_ as n}from"./plugin-vue_export-helper-DlAUqK2U.js";import{r as a,o as t,c as s,b as l,a as r,d as c,F as _}from"./app-CKeM1Wjf.js";const f={};function u(i,e){const o=a("FontIcon");return t(),s(_,null,[e[0]||(e[0]=l(" Zilla")),r("sup",null,[c(o,{icon:"fa fa-plus"})])],64)}const d=n(f,[["render",u],["__file","ZillaPlus.vue"]]);export{d as default};
